@@ -1,0 +1,465 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/d:Classes/f:Rule.cs" caret="739" fromTop="0" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/d:Classes/f:Domain.cs" caret="248" fromTop="7" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form2.cs" caret="0" fromTop="0" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/d:Classes/f:Production.cs" caret="226" fromTop="11" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/d:Classes/f:FrameLogicOutput.cs" caret="0" fromTop="0" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/d:Classes/f:ClassFactory.cs" caret="432" fromTop="17" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/d:Classes/f:MLV.cs" caret="0" fromTop="0" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.Designer.cs" caret="15355" fromTop="16" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/d:Classes/f:KnowLedgeBase.cs" caret="3021" fromTop="21" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/d:Classes/f:Frame.cs" caret="1499" fromTop="52" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="3096" fromTop="27" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/d:Classes/f:KnowLedgeBase.cs" caret="42823" fromTop="23" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="7082" fromTop="29" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/d:Classes/f:Frame.cs" caret="1031" fromTop="17" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="6434" fromTop="5" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="5285" fromTop="18" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="916" fromTop="13" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/d:Classes/f:Frame.cs" caret="654" fromTop="15" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="9235" fromTop="15" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="11591" fromTop="19" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="11126" fromTop="7" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="3173" fromTop="24" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="3143" fromTop="11" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="7863" fromTop="9" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/d:Classes/f:KnowLedgeBase.cs" caret="2980" fromTop="20" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.Designer.cs" caret="15355" fromTop="16" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="15844" fromTop="22" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="3577" fromTop="19" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="4277" fromTop="27" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="3577" fromTop="10" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="16032" fromTop="25" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="15883" fromTop="17" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="4026" fromTop="18" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="11907" fromTop="25" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="12338" fromTop="16" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="16055" fromTop="16" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="1852" fromTop="9" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="2891" fromTop="22" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="3143" fromTop="22" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="1583" fromTop="12" />
+      <File id="7E263A5C-D0E5-42F2-95EA-73055CDE2F12/f:Form1.cs" caret="3096" fromTop="27" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">False</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="string" priority="575" />
+      <Item value="IDictionary" priority="63" />
+      <Item value="class" priority="185" />
+      <Item value="public" priority="1499" />
+      <Item value="int" priority="578" />
+      <Item value="ParallelEnumerable`0" priority="31" />
+      <Item value="List" priority="506" />
+      <Item value="DomainValues`0" priority="31" />
+      <Item value="DomainValueses" priority="32" />
+      <Item value="Domain`0" priority="31" />
+      <Item value="DomainValues" priority="31" />
+      <Item value="new" priority="1376" />
+      <Item value="List&lt;DomainValue&gt;" priority="28" />
+      <Item value="RuleCondutions" priority="59" />
+      <Item value="ReRuleEnds" priority="27" />
+      <Item value="RuleCondition`0" priority="63" />
+      <Item value="ConditionId" priority="31" />
+      <Item value="Variable" priority="31" />
+      <Item value="Value" priority="31" />
+      <Item value="RuleEnd`0" priority="31" />
+      <Item value="Rule`0" priority="31" />
+      <Item value="List&lt;RuleCondition&gt;" priority="28" />
+      <Item value="RuleEnds" priority="31" />
+      <Item value="List&lt;RuleEnd&gt;" priority="28" />
+      <Item value="Frame`0" priority="767" />
+      <Item value="FrameSlots" priority="31" />
+      <Item value="ClonableStack&lt;Slot&gt;" priority="28" />
+      <Item value="List&lt;Slot&gt;" priority="87" />
+      <Item value="enum" priority="61" />
+      <Item value="SlotType`0" priority="26" />
+      <Item value="CanSelect" priority="31" />
+      <Item value="switch" priority="95" />
+      <Item value="cmbTypeLink" priority="149" />
+      <Item value="case" priority="127" />
+      <Item value="this" priority="63" />
+      <Item value="FraimDiagram" priority="95" />
+      <Item value="e" priority="735" />
+      <Item value="as" priority="63" />
+      <Item value="ShapeNode`0" priority="155" />
+      <Item value="node" priority="735" />
+      <Item value="private" priority="63" />
+      <Item value="return" priority="255" />
+      <Item value="if" priority="287" />
+      <Item value="id" priority="31" />
+      <Item value="else" priority="95" />
+      <Item value="FrameDataGridView" priority="159" />
+      <Item value="Frame" priority="133" />
+      <Item value="frame" priority="477" />
+      <Item value="FrameId" priority="26" />
+      <Item value="List&lt;Frame&gt;" priority="57" />
+      <Item value="Frames" priority="351" />
+      <Item value="FrameName" priority="32" />
+      <Item value="Error" priority="96" />
+      <Item value="IsA" priority="95" />
+      <Item value="break" priority="63" />
+      <Item value="cmbZoom" priority="62" />
+      <Item value="FrameDiagram" priority="762" />
+      <Item value="X" priority="26" />
+      <Item value="Y" priority="32" />
+      <Item value="PointF" priority="55" />
+      <Item value="var" priority="127" />
+      <Item value="null" priority="90" />
+      <Item value="mbox" priority="95" />
+      <Item value="bool" priority="95" />
+      <Item value="true" priority="255" />
+      <Item value="false" priority="159" />
+      <Item value="c1" priority="31" />
+      <Item value="Point`0" priority="31" />
+      <Item value="Point" priority="86" />
+      <Item value="startLinkPoint" priority="63" />
+      <Item value="endLinkPoint" priority="31" />
+      <Item value="EndLinkPoint" priority="95" />
+      <Item value="toolStripLabel3" priority="31" />
+      <Item value="StartLinkPoint" priority="95" />
+      <Item value="foreach" priority="255" />
+      <Item value="DiagramNode`0" priority="90" />
+      <Item value="str" priority="127" />
+      <Item value="str1" priority="31" />
+      <Item value="FrameTreeView" priority="405" />
+      <Item value="TreeViewItem`0" priority="31" />
+      <Item value="TreeViewItem" priority="28" />
+      <Item value="Label" priority="26" />
+      <Item value="TreeViewNode`0" priority="26" />
+      <Item value="Caption" priority="26" />
+      <Item value="frameitem" priority="63" />
+      <Item value="Text" priority="112" />
+      <Item value="Color`0" priority="96" />
+      <Item value="Font" priority="31" />
+      <Item value="KnowLedgeBase`0" priority="63" />
+      <Item value="KnowLedgeBase" priority="28" />
+      <Item value="MainForm`0" priority="85" />
+      <Item value="ClassFactory`0" priority="519" />
+      <Item value="static" priority="94" />
+      <Item value="String`0" priority="31" />
+      <Item value="f" priority="191" />
+      <Item value="name" priority="31" />
+      <Item value="index" priority="31" />
+      <Item value="diagramView" priority="31" />
+      <Item value="ShapeNode" priority="113" />
+      <Item value="Id" priority="32" />
+      <Item value="RectangleF" priority="53" />
+      <Item value="Random`0" priority="31" />
+      <Item value="SizeF" priority="28" />
+      <Item value="Shape" priority="144" />
+      <Item value="Brush" priority="32" />
+      <Item value="MindFusion" priority="86" />
+      <Item value="Drawing" priority="105" />
+      <Item value="Brush`0" priority="74" />
+      <Item value="Shapes`0" priority="64" />
+      <Item value="TextFormat" priority="32" />
+      <Item value="DefaultFont" priority="27" />
+      <Item value="newStyle" priority="26" />
+      <Item value="FontFamily" priority="28" />
+      <Item value="SystemFonts`0" priority="26" />
+      <Item value="System" priority="31" />
+      <Item value="FontStyle`0" priority="27" />
+      <Item value="FontFamily`0" priority="22" />
+      <Item value="Center" priority="33" />
+      <Item value="AddFrame`0" priority="31" />
+      <Item value="framename" priority="31" />
+      <Item value="Slot`0" priority="319" />
+      <Item value="frm" priority="480" />
+      <Item value="IsSystem" priority="64" />
+      <Item value="FrameScript`0" priority="26" />
+      <Item value="Next" priority="31" />
+      <Item value="lst" priority="63" />
+      <Item value="NodeEventHandler" priority="57" />
+      <Item value="FrameDiagram_NodeSelected`0" priority="27" />
+      <Item value="AddFrameFrm" priority="29" />
+      <Item value="frmlst" priority="26" />
+      <Item value="in" priority="31" />
+      <Item value="n" priority="63" />
+      <Item value="TreeNode`0" priority="31" />
+      <Item value="tn" priority="90" />
+      <Item value="MaximizeBox" priority="26" />
+      <Item value="Serializable" priority="95" />
+      <Item value="OK" priority="16" />
+      <Item value="XmlWriter`0" priority="53" />
+      <Item value="xmlWriter" priority="32" />
+      <Item value="StreamWriter`0" priority="31" />
+      <Item value="StreamWriter" priority="28" />
+      <Item value="FStream" priority="31" />
+      <Item value="fileName" priority="31" />
+      <Item value="xmlSerializer" priority="63" />
+      <Item value="FileStream`0" priority="26" />
+      <Item value="Slot" priority="86" />
+      <Item value="SlotName" priority="59" />
+      <Item value="SlotId" priority="59" />
+      <Item value="SlotInheritance" priority="32" />
+      <Item value="Override" priority="17" />
+      <Item value="SlotType" priority="60" />
+      <Item value="Integer" priority="17" />
+      <Item value="MessageBoxButtons`0" priority="26" />
+      <Item value="DialogResult" priority="63" />
+      <Item value="DialogResult`0" priority="26" />
+      <Item value="MaxFrameId" priority="31" />
+      <Item value="TreeContextMenu" priority="31" />
+      <Item value="dn" priority="63" />
+      <Item value="ddn" priority="63" />
+      <Item value="frameId" priority="31" />
+      <Item value="listSlot" priority="127" />
+      <Item value="virtual" priority="31" />
+      <Item value="frId" priority="31" />
+      <Item value="DataGridViewRow" priority="86" />
+      <Item value="Cells" priority="26" />
+      <Item value="row" priority="31" />
+      <Item value="DataGridViewCell`0" priority="58" />
+      <Item value="DataGridViewTextBoxCell" priority="26" />
+      <Item value="cell1" priority="63" />
+      <Item value="slot" priority="90" />
+      <Item value="cell2" priority="31" />
+      <Item value="cell3" priority="63" />
+      <Item value="NewsStyleUriParser`0" priority="26" />
+      <Item value="SlotDefault" priority="32" />
+      <Item value="curList" priority="58" />
+      <Item value="float" priority="63" />
+      <Item value="DiagramLink`0" priority="31" />
+      <Item value="DiagramLink" priority="28" />
+      <Item value="frame1" priority="31" />
+      <Item value="sender" priority="63" />
+      <Item value="y" priority="63" />
+      <Item value="x" priority="63" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SavannaFrame.MainForm">
+      <Item value="FraimDiagram" priority="27" />
+      <Item value="FrameDiagram_NodeSelected`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MindFusion.Diagramming.Diagram">
+      <Item value="Links" priority="107" />
+      <Item value="Nodes" priority="504" />
+      <Item value="GetNodeAt`0" priority="26" />
+      <Item value="Repaint" priority="26" />
+      <Item value="DefaultShape" priority="26" />
+      <Item value="Selection" priority="26" />
+      <Item value="NodeSelected" priority="49" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MindFusion.Diagramming.NodeEventArgs">
+      <Item value="Node" priority="185" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MindFusion.Diagramming.ShapeNode">
+      <Item value="Text" priority="80" />
+      <Item value="Id" priority="81" />
+      <Item value="SetBounds`0" priority="53" />
+      <Item value="TextFormat" priority="80" />
+      <Item value="Font" priority="27" />
+      <Item value="GetBounds`0" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MindFusion.Diagramming.DiagramNodeCollection">
+      <Item value="Count" priority="80" />
+      <Item value="Indexer" priority="26" />
+      <Item value="Add`0" priority="53" />
+      <Item value="Clear`0" priority="26" />
+      <Item value="Remove`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SavannaFrame.Classes.Frame">
+      <Item value="FrameId" priority="289" />
+      <Item value="FrameName" priority="294" />
+      <Item value="IsA" priority="161" />
+      <Item value="Error" priority="53" />
+      <Item value="FrameSlots" priority="53" />
+      <Item value="X" priority="80" />
+      <Item value="Y" priority="82" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="188" />
+      <Item value="Find`0" priority="215" />
+      <Item value="IndexOf`0" priority="27" />
+      <Item value="FindIndex`0" priority="22" />
+      <Item value="RemoveAt`0" priority="22" />
+      <Item value="AddRange`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MindFusion.Diagramming.LinkEventArgs">
+      <Item value="Link" priority="161" />
+      <Item value="MousePosition" priority="76" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MindFusion.Diagramming.DiagramLink">
+      <Item value="Id" priority="26" />
+      <Item value="Text" priority="81" />
+      <Item value="BaseShape" priority="26" />
+      <Item value="TextColor" priority="49" />
+      <Item value="Pen" priority="27" />
+      <Item value="TextStyle" priority="22" />
+      <Item value="Font" priority="27" />
+      <Item value="HeadShape" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripComboBox">
+      <Item value="SelectedIndex" priority="134" />
+      <Item value="SelectedItem" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.PointF">
+      <Item value="X" priority="26" />
+      <Item value="Y" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.MouseEventArgs">
+      <Item value="X" priority="185" />
+      <Item value="Y" priority="162" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MindFusion.Diagramming.DiagramNode">
+      <Item value="SetBounds`0" priority="26" />
+      <Item value="GetBounds`0" priority="104" />
+      <Item value="Id" priority="263" />
+      <Item value="Brush" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.RectangleF">
+      <Item value="Contains`0" priority="53" />
+      <Item value="X" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Point">
+      <Item value="X" priority="76" />
+      <Item value="Y" priority="53" />
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ToolStripLabel">
+      <Item value="Text" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="80" />
+      <Item value="GetType`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TreeView">
+      <Item value="Nodes" priority="180" />
+      <Item value="SelectedNode" priority="130" />
+      <Item value="Refresh`0" priority="26" />
+      <Item value="DataBindings" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TreeNodeCollection">
+      <Item value="Add`0" priority="26" />
+      <Item value="Remove`0" priority="76" />
+      <Item value="RemoveByKey`0" priority="22" />
+      <Item value="IndexOf`0" priority="49" />
+      <Item value="RemoveAt`0" priority="22" />
+      <Item value="Clear`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="DarkRed" priority="26" />
+      <Item value="Red" priority="26" />
+      <Item value="PowderBlue" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MindFusion.Drawing.Pen">
+      <Item value="Color" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Font">
+      <Item value="Bold" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SavannaFrame.Classes.ClassFactory">
+      <Item value="kBase" priority="351" />
+      <Item value="isSaved" priority="26" />
+      <Item value="SelectedObjId" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="ToString`0" priority="22" />
+      <Item value="Substring`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MindFusion.Diagramming.WinForms.DiagramView">
+      <Item value="ZoomFactor" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MindFusion.Diagramming.Shapes">
+      <Item value="Ellipse" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.FontFamily">
+      <Item value="Families" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.StringFormat">
+      <Item value="Alignment" priority="26" />
+      <Item value="LineAlignment" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridView">
+      <Item value="DataSource" priority="22" />
+      <Item value="Rows" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SavannaFrame.Classes.KnowLedgeBase">
+      <Item value="EditGridSlots`0" priority="26" />
+      <Item value="FrameList`0" priority="161" />
+      <Item value="DeleteFrame`0" priority="26" />
+      <Item value="GetMaxSlotId`0" priority="22" />
+      <Item value="SlotList`0" priority="26" />
+      <Item value="AddIsA`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TreeNodeMouseClickEventArgs">
+      <Item value="Node" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TreeNode">
+      <Item value="Text" priority="161" />
+      <Item value="Index" priority="26" />
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SavannaFrame.Classes.Slot">
+      <Item value="IsSystem" priority="80" />
+      <Item value="SlotName" priority="53" />
+      <Item value="SlotType" priority="26" />
+      <Item value="SlotDefault" priority="50" />
+      <Item value="Parent" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.SaveFileDialog">
+      <Item value="ShowDialog`0" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.Serialization.XmlSerializer">
+      <Item value="Serialize`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamWriter">
+      <Item value="Close`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SavannaFrame.Classes.SlotInherit">
+      <Item value="Same" priority="23" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SavannaFrame.Classes.SlotType">
+      <Item value="Frame" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DialogResult">
+      <Item value="Cancel" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MindFusion.Diagramming.DiagramLinkCollection">
+      <Item value="Clear`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewRowCollection">
+      <Item value="Add`0" priority="49" />
+      <Item value="Clear`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewRow">
+      <Item value="Cells" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCellCollection">
+      <Item value="Add`0" priority="26" />
+      <Item value="AddRange`0" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCell">
+      <Item value="Value" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.EventArgs">
+      <Item value="Equals`0" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

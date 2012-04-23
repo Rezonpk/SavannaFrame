@@ -1,0 +1,40 @@
+C:\с диска\SavannaFrame\SavannaFrame\bin\Debug\SavannaFrame.exe
+C:\с диска\SavannaFrame\SavannaFrame\bin\Debug\SavannaFrame.pdb
+C:\с диска\SavannaFrame\SavannaFrame\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\с диска\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.Properties.Resources.resources
+C:\с диска\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.exe
+C:\с диска\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.pdb
+C:\с диска\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.MainForm.resources
+C:\с диска\SavannaFrame\SavannaFrame\bin\Debug\SavannaFrame.exe.config
+C:\с диска\SavannaFrame\SavannaFrame\bin\Debug\MindFusion.Diagramming.dll
+C:\с диска\SavannaFrame\SavannaFrame\bin\Debug\MindFusion.Diagramming.WinForms.Design.dll
+C:\с диска\SavannaFrame\SavannaFrame\bin\Debug\MindFusion.Graphs.dll
+C:\с диска\SavannaFrame\SavannaFrame\bin\Debug\MindFusion.Svg.dll
+C:\с диска\SavannaFrame\SavannaFrame\bin\Debug\MindFusion.Diagramming.xml
+C:\с диска\SavannaFrame\SavannaFrame\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\с диска\SavannaFrame\SavannaFrame\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\с диска\SavannaFrame\SavannaFrame\bin\Debug\MindFusion.Diagramming.WinForms.dll
+C:\с диска\SavannaFrame\SavannaFrame\bin\Debug\MindFusion.Diagramming.WinForms.xml
+C:\с диска\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.exe.licenses
+C:\с диска\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.AddFrameFrm.resources
+C:\с диска\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.SlotFrm.resources
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\bin\Debug\SavannaFrame.exe.config
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.exe
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.pdb
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\bin\Debug\SavannaFrame.exe
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\bin\Debug\SavannaFrame.pdb
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\bin\Debug\MindFusion.Common.dll
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\bin\Debug\MindFusion.Scripting.dll
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\bin\Debug\MindFusion.Graphs.dll
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\bin\Debug\MindFusion.Svg.dll
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\bin\Debug\MindFusion.Diagramming.xml
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\bin\Debug\MindFusion.Diagramming.WinForms.xml
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.MainForm.resources
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.AddFrameFrm.resources
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.Properties.Resources.resources
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.SlotFrm.resources
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.exe.licenses
+C:\Users\Demid\Desktop\SavannaFrame\SavannaFrame\obj\x86\Debug\SavannaFrame.GameField.resources
