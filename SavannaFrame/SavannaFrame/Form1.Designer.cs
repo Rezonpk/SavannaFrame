@@ -259,6 +259,7 @@
             this.FrameDiagram.NodeSelected += new MindFusion.Diagramming.NodeEventHandler(this.FrameDiagram_NodeSelected);
             this.FrameDiagram.NodeDeselected += new MindFusion.Diagramming.NodeEventHandler(this.FrameDiagram_NodeDeselected);
             this.FrameDiagram.NodeDeleting += new MindFusion.Diagramming.NodeValidationEventHandler(this.FrameDiagram_NodeDeleting);
+            this.FrameDiagram.NodeDeleted += new MindFusion.Diagramming.NodeEventHandler(this.FrameDiagram_NodeDeleted);
             this.FrameDiagram.SelectionMoved += new System.EventHandler(this.FrameDiagram_SelectionMoved);
             // 
             // toolStrip1
@@ -463,6 +464,7 @@
             this.Controls.Add(this.topPanelMainMenu);
             this.MainMenuStrip = this.MainMenu;
             this.Name = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.topPanelMainMenu.ResumeLayout(false);
             this.topPanelMainMenu.PerformLayout();
             this.MainMenu.ResumeLayout(false);

@@ -54,6 +54,9 @@ namespace SavannaFrame
         {
             Frame frame = new Frame();
             Frame frame1 = new Frame(); 
+
+            Frame frameUpper;// = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)e.Link.Destination.Id);
+            Frame frameLower;
             string str = "";
             switch (cmbTypeLink.SelectedIndex)
             {
@@ -61,27 +64,34 @@ namespace SavannaFrame
                     e.Link.Text = "Is_a";
                     e.Link.TextColor = Color.DarkRed;
                     e.Link.Pen.Color = Color.Red;
-                    foreach (DiagramNode node in FrameDiagram.Nodes)
-                    {
-                        if (node.GetBounds().Contains(StartLinkPoint.X, StartLinkPoint.Y))
-                        {
-                            if (cmbTypeLink.SelectedIndex == 0)
-                            {
-                                frame = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)node.Id);
-                            }
+                    frameUpper = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)e.Link.Destination.Id);
+                    frameLower = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)e.Link.Origin.Id);
+
+                    //foreach (DiagramNode node in FrameDiagram.Nodes)
+                    //{
+                    //    if (node.GetBounds().Contains(StartLinkPoint.X, StartLinkPoint.Y))
+                    //    {
+                    //        if (cmbTypeLink.SelectedIndex == 0)
+                    //        {
+                    //            frame = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)node.Id);
+                    //        }
                         
-                            str = node.Id.ToString() + cmbTypeLink.SelectedItem.ToString();
-                        }
-                        if (node.GetBounds().Contains(EndLinkPoint.X, EndLinkPoint.Y))
-                        {
-                            frame1 = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)node.Id);
-                        }
+                    //        str = node.Id.ToString() + cmbTypeLink.SelectedItem.ToString();
+                    //    }
+                    //    if (node.GetBounds().Contains(EndLinkPoint.X, EndLinkPoint.Y))
+                    //    {
+                    //        frame1 = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)node.Id);
+                    //    }
 
-                    }
+                    //}
 
-                    frame.IsA.ParentId = frame1.FrameId;
-                    frame.IsA.SlotDefault = frame1.FrameName;
-                    frame.IsA.frameId = frame1.FrameId;
+                    //frame.IsA.ParentId = frame1.FrameId;
+                    //frame.IsA.SlotDefault = frame1.FrameName;
+                    //frame.IsA.frameId = frame1.FrameId;
+
+                    frameLower.IsA.ParentId = frameUpper.FrameId;
+                    frameLower.IsA.SlotDefault = frameUpper.FrameName;
+                    frameLower.IsA.frameId = frameUpper.FrameId;
                     ClassFactory.kBase.AddIsA(frame); //простор для оптимизации
                     break;
                 case 1:
@@ -89,8 +99,8 @@ namespace SavannaFrame
                     e.Link.TextColor = Color.DarkBlue;
                     e.Link.Pen.Color = Color.Blue;
 
-                    Frame frameUpper = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)e.Link.Destination.Id);
-                    Frame frameLower = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)e.Link.Origin.Id);
+                    frameUpper = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)e.Link.Destination.Id);
+                    frameLower = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)e.Link.Origin.Id);
 
                     //foreach (DiagramNode node in FrameDiagram.Nodes)
                     //{
@@ -484,6 +494,27 @@ namespace SavannaFrame
         {
             //x = e.X;
             //y = e.Y;
+        }
+
+        private void FrameDiagram_NodeDeleted(object sender, NodeEventArgs e)
+        {
+            int idToDel=((int)e.Node.Id);
+            foreach (Frame frame in ClassFactory.kBase.FrameList())
+            {
+                if (frame.IsA.frameId == idToDel)
+                    frame.IsA.frameId = -1;
+                List<Slot> slotsToDel=new List<Slot>();
+                foreach (Slot slot in frame.FrameSlots)
+                    if (slot.frameId == idToDel)
+                        slotsToDel.Add(slot);
+                foreach (Slot slot in slotsToDel)
+                    frame.FrameSlots.Remove(slot);
+            }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
