@@ -9,17 +9,21 @@ using System.Windows.Forms;
 
 namespace SavannaFrame
 {
+    /// <summary>
+    /// Класс, отвечающий за отображение игрового поля.
+    /// </summary>
     public partial class GameField : UserControl
     {
-
-        int rowCount=10;
-        int columnCount=10;
-
+        private int rowCount=10;
+        private int columnCount=10;
         private int cellSize = 50; //размер одной клетки
         private int cellOffset = 1; //отсутп между клетками на поле (чтобы было видно границу)
 
         private List<List<GameCell>> cells;
 
+        /// <summary>
+        /// Число ячеек по вертикали на игровом поле. !ВАЖНО: при задании значения игровое поле обнуляется.
+        /// </summary>
         public int RowCount
         {
             get
@@ -32,6 +36,9 @@ namespace SavannaFrame
             }
         }
 
+        /// <summary>
+        /// Число ячеек по горизонтали на игровом поле. !ВАЖНО: при задании значения игровое поле обнуляется.
+        /// </summary>
         public int ColumnCount
         {
             get
@@ -44,6 +51,9 @@ namespace SavannaFrame
             }
         }
 
+        /// <summary>
+        /// Размер одной ячейки игрового поля.
+        /// </summary>
         public int CellSize
         {
             get
@@ -52,16 +62,40 @@ namespace SavannaFrame
             }
             set
             {
-                this.cellSize = value;
-                this.SuspendLayout();
-                foreach (GameCell cell in this.Controls)
-                    cell.Size = cellSize;
-                this.ResumeLayout();
-                this.layoutCells();
+                //Не знаю, поможет ли, но задумка такая: 
+                //если мы увеличиваем размер ячеек, то вначале ресайзим ячейки, а потом их передвигаем
+                //иначе - в обратном порядке. В теории, при нулевом cellOffset должно избавить от мерцания полосок между ячейками.
+                if (this.cellSize < value)
+                {
+                    this.cellSize = value;
+
+                    this.SuspendLayout();
+                    foreach (GameCell cell in this.Controls)
+                        cell.Size = cellSize;
+                    this.ResumeLayout();
+
+                    this.layoutCells();                    
+                }
+                else
+                {
+                    this.cellSize = value;    
+                
+                    this.layoutCells();
+
+                    this.SuspendLayout();
+                    foreach (GameCell cell in this.Controls)
+                        cell.Size = cellSize;
+                    this.ResumeLayout();                    
+                }
+                
+
                 
             }
         }
 
+        /// <summary>
+        /// Отступ между ячейками поля.
+        /// </summary>
         public int CellOffset
         {
             get
@@ -75,7 +109,10 @@ namespace SavannaFrame
             }
         }
 
-        public void layoutCells()
+        /// <summary>
+        /// Размещает ячейки внутри контрола в соответствии с их порядком, размером и отступом между ними.
+        /// </summary>
+        private void layoutCells()
         {
             int xCoord, yCoord = 0;
             this.SuspendLayout();
@@ -95,6 +132,11 @@ namespace SavannaFrame
             this.ResumeLayout();
         }
 
+        /// <summary>
+        /// Задает размер поля (в ячейках) по вертикали и горизонтали. !ВАЖНО: игровое поле создается заново! Все данные о ячейках стираются!
+        /// </summary>
+        /// <param name="rowCount">Число ячеек по вертикали (число рядов)</param>
+        /// <param name="columnCount">Число ячеек по горизонтали (число столбцов)</param>
         public void setSize(int rowCount, int columnCount)
         {
             if (rowCount < 1 || columnCount < 1)
@@ -131,6 +173,11 @@ namespace SavannaFrame
             this.setSize(this.rowCount, this.columnCount); //значения по умолчанию у нас заданы, теперь нужно проинициализировать поле этими значениями.
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="rowsCount">Число ячеек по вертикали (число рядов)</param>
+        /// <param name="columnsCount">Число ячеек по горизонтали (число столбцов)</param>
         public GameField(int rowsCount, int columnsCount)
         {
             InitializeComponent();
@@ -148,13 +195,25 @@ namespace SavannaFrame
         }
     }
 
+    /// <summary>
+    /// Класс, отвечающий за отображение одной ячейки игрового поля.
+    /// </summary>
     public class GameCell : PictureBox
     {
         private int x, y;
         private GameField gameField;
         
+        /// <summary>
+        /// Индекс строки ячейки на игровом поле
+        /// </summary>
         public int X { get { return x; } }
+        /// <summary>
+        /// Индекс столбца ячейки на игровом поле
+        /// </summary>
         public int Y { get { return y; } }
+        /// <summary>
+        /// Размер ячейки в пикселях
+        /// </summary>
         public new int Size
         {
             get
@@ -168,14 +227,24 @@ namespace SavannaFrame
                 this.ResumeLayout();
             }
         }
+        /// <summary>
+        /// Игровое поле, которому принадлежит ячейка.
+        /// </summary>
         public GameField GameField { get { return gameField; } }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="gameField">Игровое поле, которому принадлежит ячейка.</param>
+        /// <param name="x">Индекс ряда ячейки на игровом поле.</param>
+        /// <param name="y">Индекс столбца ячейки на игровом поле.</param>
+        /// <param name="size">Размер ячейки (в пикселях).</param>
         public GameCell(GameField gameField, int x, int y, int size) : base()
         {
             this.gameField = gameField;
             this.Size = size;
             this.SizeMode = PictureBoxSizeMode.StretchImage;
-            this.Image = Image.FromFile("Images\\zebra.jpg");
+            this.Image = Image.FromFile("Images\\grass.jpg"); //пусть пока будет так :) Значение по умолчанию - трава.
             this.x = x;
             this.y = y;
         }

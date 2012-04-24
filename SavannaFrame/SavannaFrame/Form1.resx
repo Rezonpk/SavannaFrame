@@ -120,102 +120,14 @@
   <metadata name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>146, 17</value>
   </metadata>
-  <data name="&gt;&gt;MainMenu.Name" xml:space="preserve">
-    <value>MainMenu</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Parent" xml:space="preserve">
-    <value>topPanelMainMenu</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="topPanelMainMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="topPanelMainMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="topPanelMainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>937, 25</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="topPanelMainMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;topPanelMainMenu.Name" xml:space="preserve">
-    <value>topPanelMainMenu</value>
-  </data>
-  <data name="&gt;&gt;topPanelMainMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;topPanelMainMenu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;topPanelMainMenu.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>146, 17</value>
-  </metadata>
   <data name="MainMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
-  </data>
-  <data name="файлToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 21</value>
-  </data>
-  <data name="файлToolStripMenuItem.Text" xml:space="preserve">
-    <value>Файл</value>
-  </data>
-  <data name="модельToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 21</value>
-  </data>
-  <data name="модельToolStripMenuItem.Text" xml:space="preserve">
-    <value>Модель</value>
-  </data>
-  <data name="играToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 21</value>
-  </data>
-  <data name="играToolStripMenuItem.Text" xml:space="preserve">
-    <value>Игра</value>
-  </data>
-  <data name="справкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 21</value>
-  </data>
-  <data name="справкаToolStripMenuItem.Text" xml:space="preserve">
-    <value>Справка</value>
-  </data>
-  <data name="MainMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>937, 25</value>
-  </data>
-  <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="MainMenu.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Name" xml:space="preserve">
-    <value>MainMenu</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Parent" xml:space="preserve">
-    <value>topPanelMainMenu</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="создатьToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+N</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="создатьToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 22</value>
   </data>
@@ -258,11 +170,234 @@
   <data name="выходToolStripMenuItem.Text" xml:space="preserve">
     <value>Выход</value>
   </data>
+  <data name="файлToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 21</value>
+  </data>
+  <data name="файлToolStripMenuItem.Text" xml:space="preserve">
+    <value>Файл</value>
+  </data>
   <data name="доменыToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 22</value>
   </data>
   <data name="доменыToolStripMenuItem.Text" xml:space="preserve">
     <value>Домены</value>
+  </data>
+  <data name="модельToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 21</value>
+  </data>
+  <data name="модельToolStripMenuItem.Text" xml:space="preserve">
+    <value>Модель</value>
+  </data>
+  <data name="играToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 21</value>
+  </data>
+  <data name="играToolStripMenuItem.Text" xml:space="preserve">
+    <value>Игра</value>
+  </data>
+  <data name="справкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 21</value>
+  </data>
+  <data name="справкаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Справка</value>
+  </data>
+  <data name="MainMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>937, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MainMenu.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Name" xml:space="preserve">
+    <value>MainMenu</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Parent" xml:space="preserve">
+    <value>topPanelMainMenu</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="topPanelMainMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="topPanelMainMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="topPanelMainMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>937, 25</value>
+  </data>
+  <data name="topPanelMainMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;topPanelMainMenu.Name" xml:space="preserve">
+    <value>topPanelMainMenu</value>
+  </data>
+  <data name="&gt;&gt;topPanelMainMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;topPanelMainMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;topPanelMainMenu.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="DiagramContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>642, 17</value>
+  </metadata>
+  <data name="добавитьФреймшаблонToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="добавитьФреймшаблонToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Добавить фрейм</value>
+  </data>
+  <data name="DiagramContextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 26</value>
+  </data>
+  <data name="&gt;&gt;DiagramContextMenu.Name" xml:space="preserve">
+    <value>DiagramContextMenu</value>
+  </data>
+  <data name="&gt;&gt;DiagramContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="FrameDiagram.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>361, 17</value>
+  </metadata>
+  <data name="diagramView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="diagramView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
+  </data>
+  <data name="diagramView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>623, 530</value>
+  </data>
+  <data name="diagramView.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="diagramView.Text" xml:space="preserve">
+    <value>diagramView</value>
+  </data>
+  <data name="&gt;&gt;diagramView.Name" xml:space="preserve">
+    <value>diagramView</value>
+  </data>
+  <data name="&gt;&gt;diagramView.Type" xml:space="preserve">
+    <value>MindFusion.Diagramming.WinForms.DiagramView, MindFusion.Diagramming.WinForms, Version=5.8.0.25067, Culture=neutral, PublicKeyToken=a0d18338041985ba</value>
+  </data>
+  <data name="&gt;&gt;diagramView.Parent" xml:space="preserve">
+    <value>panelDiagramm</value>
+  </data>
+  <data name="&gt;&gt;diagramView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>256, 17</value>
+  </metadata>
+  <data name="toolStripLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 22</value>
+  </data>
+  <data name="toolStripLabel1.Text" xml:space="preserve">
+    <value>Тип связи:</value>
+  </data>
+  <data name="cmbTypeLink.Items" xml:space="preserve">
+    <value>Is_a</value>
+  </data>
+  <data name="cmbTypeLink.Items1" xml:space="preserve">
+    <value>Sub</value>
+  </data>
+  <data name="cmbTypeLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 25</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="toolStripLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 22</value>
+  </data>
+  <data name="toolStripLabel2.Text" xml:space="preserve">
+    <value>Масштаб:</value>
+  </data>
+  <data name="cmbZoom.AutoCompleteCustomSource" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="cmbZoom.AutoCompleteCustomSource1" xml:space="preserve">
+    <value>75%</value>
+  </data>
+  <data name="cmbZoom.AutoCompleteCustomSource2" xml:space="preserve">
+    <value>50%</value>
+  </data>
+  <data name="cmbZoom.AutoCompleteCustomSource3" xml:space="preserve">
+    <value>25%</value>
+  </data>
+  <data name="cmbZoom.Items" xml:space="preserve">
+    <value>50%</value>
+  </data>
+  <data name="cmbZoom.Items1" xml:space="preserve">
+    <value>75%</value>
+  </data>
+  <data name="cmbZoom.Items2" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="cmbZoom.Items3" xml:space="preserve">
+    <value>125%</value>
+  </data>
+  <data name="cmbZoom.Items4" xml:space="preserve">
+    <value>150%</value>
+  </data>
+  <data name="cmbZoom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 25</value>
+  </data>
+  <data name="toolStripLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 22</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="toolStripLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 22</value>
+  </data>
+  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>623, 25</value>
+  </data>
+  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="toolStrip1.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
+    <value>panelDiagramm</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelDiagramm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelDiagramm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 3</value>
+  </data>
+  <data name="panelDiagramm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>623, 555</value>
+  </data>
+  <data name="panelDiagramm.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;panelDiagramm.Name" xml:space="preserve">
     <value>panelDiagramm</value>
@@ -274,6 +409,198 @@
     <value>FramePage</value>
   </data>
   <data name="&gt;&gt;panelDiagramm.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="TreeContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>493, 17</value>
+  </metadata>
+  <data name="добавитьФреймшаблонToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="добавитьФреймшаблонToolStripMenuItem.Text" xml:space="preserve">
+    <value>Добавить фрейм</value>
+  </data>
+  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 6</value>
+  </data>
+  <data name="добавитьСлотToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="добавитьСлотToolStripMenuItem.Text" xml:space="preserve">
+    <value>Добавить слот</value>
+  </data>
+  <data name="удалитьСлотToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="удалитьСлотToolStripMenuItem.Text" xml:space="preserve">
+    <value>Удалить слот</value>
+  </data>
+  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 6</value>
+  </data>
+  <data name="удалитьФреймToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 22</value>
+  </data>
+  <data name="удалитьФреймToolStripMenuItem.Text" xml:space="preserve">
+    <value>Удалить фрейм</value>
+  </data>
+  <data name="TreeContextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 104</value>
+  </data>
+  <data name="&gt;&gt;TreeContextMenu.Name" xml:space="preserve">
+    <value>TreeContextMenu</value>
+  </data>
+  <data name="&gt;&gt;TreeContextMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FrameTreeView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="FrameTreeView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="FrameTreeView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 311</value>
+  </data>
+  <data name="FrameTreeView.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;FrameTreeView.Name" xml:space="preserve">
+    <value>FrameTreeView</value>
+  </data>
+  <data name="&gt;&gt;FrameTreeView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FrameTreeView.Parent" xml:space="preserve">
+    <value>panelDataView</value>
+  </data>
+  <data name="&gt;&gt;FrameTreeView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="SlotName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SlotName.HeaderText" xml:space="preserve">
+    <value>Имя слота</value>
+  </data>
+  <metadata name="SlotType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SlotType.HeaderText" xml:space="preserve">
+    <value>Тип слота</value>
+  </data>
+  <metadata name="SlotValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SlotValue.HeaderText" xml:space="preserve">
+    <value>Значение</value>
+  </data>
+  <data name="FrameDataGridView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="FrameDataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="FrameDataGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 200</value>
+  </data>
+  <data name="FrameDataGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;FrameDataGridView.Name" xml:space="preserve">
+    <value>FrameDataGridView</value>
+  </data>
+  <data name="&gt;&gt;FrameDataGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FrameDataGridView.Parent" xml:space="preserve">
+    <value>EditPanel</value>
+  </data>
+  <data name="&gt;&gt;FrameDataGridView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="EditPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="EditPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 311</value>
+  </data>
+  <data name="EditPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 200</value>
+  </data>
+  <data name="EditPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;EditPanel.Name" xml:space="preserve">
+    <value>EditPanel</value>
+  </data>
+  <data name="&gt;&gt;EditPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditPanel.Parent" xml:space="preserve">
+    <value>panelDataView</value>
+  </data>
+  <data name="&gt;&gt;EditPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="EditBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 6</value>
+  </data>
+  <data name="EditBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 33</value>
+  </data>
+  <data name="EditBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="EditBtn.Text" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="&gt;&gt;EditBtn.Name" xml:space="preserve">
+    <value>EditBtn</value>
+  </data>
+  <data name="&gt;&gt;EditBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EditBtn.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;EditBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 511</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 44</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>panelDataView</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelDataView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="panelDataView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="panelDataView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 555</value>
+  </data>
+  <data name="panelDataView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;panelDataView.Name" xml:space="preserve">
@@ -536,468 +863,6 @@
   </data>
   <data name="&gt;&gt;MainPanel.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>256, 17</value>
-  </metadata>
-  <data name="&gt;&gt;diagramView.Name" xml:space="preserve">
-    <value>diagramView</value>
-  </data>
-  <data name="&gt;&gt;diagramView.Type" xml:space="preserve">
-    <value>MindFusion.Diagramming.WinForms.DiagramView, MindFusion.Diagramming.WinForms, Version=5.8.0.25067, Culture=neutral, PublicKeyToken=a0d18338041985ba</value>
-  </data>
-  <data name="&gt;&gt;diagramView.Parent" xml:space="preserve">
-    <value>panelDiagramm</value>
-  </data>
-  <data name="&gt;&gt;diagramView.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
-    <value>toolStrip1</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
-    <value>panelDiagramm</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panelDiagramm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panelDiagramm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 3</value>
-  </data>
-  <data name="panelDiagramm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>623, 555</value>
-  </data>
-  <data name="panelDiagramm.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panelDiagramm.Name" xml:space="preserve">
-    <value>panelDiagramm</value>
-  </data>
-  <data name="&gt;&gt;panelDiagramm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelDiagramm.Parent" xml:space="preserve">
-    <value>FramePage</value>
-  </data>
-  <data name="&gt;&gt;panelDiagramm.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="DiagramContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>642, 17</value>
-  </metadata>
-  <data name="DiagramContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 26</value>
-  </data>
-  <data name="&gt;&gt;DiagramContextMenu.Name" xml:space="preserve">
-    <value>DiagramContextMenu</value>
-  </data>
-  <data name="&gt;&gt;DiagramContextMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <metadata name="FrameDiagram.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>361, 17</value>
-  </metadata>
-  <data name="diagramView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="diagramView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 25</value>
-  </data>
-  <data name="diagramView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>623, 530</value>
-  </data>
-  <data name="diagramView.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="diagramView.Text" xml:space="preserve">
-    <value>diagramView</value>
-  </data>
-  <data name="&gt;&gt;diagramView.Name" xml:space="preserve">
-    <value>diagramView</value>
-  </data>
-  <data name="&gt;&gt;diagramView.Type" xml:space="preserve">
-    <value>MindFusion.Diagramming.WinForms.DiagramView, MindFusion.Diagramming.WinForms, Version=5.8.0.25067, Culture=neutral, PublicKeyToken=a0d18338041985ba</value>
-  </data>
-  <data name="&gt;&gt;diagramView.Parent" xml:space="preserve">
-    <value>panelDiagramm</value>
-  </data>
-  <data name="&gt;&gt;diagramView.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="добавитьФреймшаблонToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="добавитьФреймшаблонToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Добавить фрейм</value>
-  </data>
-  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>256, 17</value>
-  </metadata>
-  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>623, 25</value>
-  </data>
-  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="toolStrip1.Text" xml:space="preserve">
-    <value>toolStrip1</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
-    <value>toolStrip1</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
-    <value>panelDiagramm</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="toolStripLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 22</value>
-  </data>
-  <data name="toolStripLabel1.Text" xml:space="preserve">
-    <value>Тип связи:</value>
-  </data>
-  <data name="cmbTypeLink.Items" xml:space="preserve">
-    <value>Is_a</value>
-  </data>
-  <data name="cmbTypeLink.Items1" xml:space="preserve">
-    <value>Sub</value>
-  </data>
-  <data name="cmbTypeLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
-  </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="toolStripLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 22</value>
-  </data>
-  <data name="toolStripLabel2.Text" xml:space="preserve">
-    <value>Масштаб:</value>
-  </data>
-  <data name="cmbZoom.AutoCompleteCustomSource" xml:space="preserve">
-    <value>100%</value>
-  </data>
-  <data name="cmbZoom.AutoCompleteCustomSource1" xml:space="preserve">
-    <value>75%</value>
-  </data>
-  <data name="cmbZoom.AutoCompleteCustomSource2" xml:space="preserve">
-    <value>50%</value>
-  </data>
-  <data name="cmbZoom.AutoCompleteCustomSource3" xml:space="preserve">
-    <value>25%</value>
-  </data>
-  <data name="cmbZoom.Items" xml:space="preserve">
-    <value>50%</value>
-  </data>
-  <data name="cmbZoom.Items1" xml:space="preserve">
-    <value>75%</value>
-  </data>
-  <data name="cmbZoom.Items2" xml:space="preserve">
-    <value>100%</value>
-  </data>
-  <data name="cmbZoom.Items3" xml:space="preserve">
-    <value>125%</value>
-  </data>
-  <data name="cmbZoom.Items4" xml:space="preserve">
-    <value>150%</value>
-  </data>
-  <data name="cmbZoom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
-  </data>
-  <data name="toolStripLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 22</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="toolStripLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 22</value>
-  </data>
-  <data name="&gt;&gt;FrameTreeView.Name" xml:space="preserve">
-    <value>FrameTreeView</value>
-  </data>
-  <data name="&gt;&gt;FrameTreeView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FrameTreeView.Parent" xml:space="preserve">
-    <value>panelDataView</value>
-  </data>
-  <data name="&gt;&gt;FrameTreeView.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;EditPanel.Name" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditPanel.Parent" xml:space="preserve">
-    <value>panelDataView</value>
-  </data>
-  <data name="&gt;&gt;EditPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>panelDataView</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panelDataView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="panelDataView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="panelDataView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 555</value>
-  </data>
-  <data name="panelDataView.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panelDataView.Name" xml:space="preserve">
-    <value>panelDataView</value>
-  </data>
-  <data name="&gt;&gt;panelDataView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelDataView.Parent" xml:space="preserve">
-    <value>FramePage</value>
-  </data>
-  <data name="&gt;&gt;panelDataView.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="TreeContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>493, 17</value>
-  </metadata>
-  <data name="TreeContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 104</value>
-  </data>
-  <data name="&gt;&gt;TreeContextMenu.Name" xml:space="preserve">
-    <value>TreeContextMenu</value>
-  </data>
-  <data name="&gt;&gt;TreeContextMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="FrameTreeView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="FrameTreeView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="FrameTreeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 311</value>
-  </data>
-  <data name="FrameTreeView.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;FrameTreeView.Name" xml:space="preserve">
-    <value>FrameTreeView</value>
-  </data>
-  <data name="&gt;&gt;FrameTreeView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FrameTreeView.Parent" xml:space="preserve">
-    <value>panelDataView</value>
-  </data>
-  <data name="&gt;&gt;FrameTreeView.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="добавитьФреймшаблонToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="добавитьФреймшаблонToolStripMenuItem.Text" xml:space="preserve">
-    <value>Добавить фрейм</value>
-  </data>
-  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 6</value>
-  </data>
-  <data name="добавитьСлотToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="добавитьСлотToolStripMenuItem.Text" xml:space="preserve">
-    <value>Добавить слот</value>
-  </data>
-  <data name="удалитьСлотToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="удалитьСлотToolStripMenuItem.Text" xml:space="preserve">
-    <value>Удалить слот</value>
-  </data>
-  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 6</value>
-  </data>
-  <data name="удалитьФреймToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="удалитьФреймToolStripMenuItem.Text" xml:space="preserve">
-    <value>Удалить фрейм</value>
-  </data>
-  <data name="&gt;&gt;FrameDataGridView.Name" xml:space="preserve">
-    <value>FrameDataGridView</value>
-  </data>
-  <data name="&gt;&gt;FrameDataGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FrameDataGridView.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;FrameDataGridView.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="EditPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="EditPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 311</value>
-  </data>
-  <data name="EditPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 200</value>
-  </data>
-  <data name="EditPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;EditPanel.Name" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;EditPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditPanel.Parent" xml:space="preserve">
-    <value>panelDataView</value>
-  </data>
-  <data name="&gt;&gt;EditPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="SlotName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="SlotType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="SlotValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="FrameDataGridView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="FrameDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="FrameDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 200</value>
-  </data>
-  <data name="FrameDataGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;FrameDataGridView.Name" xml:space="preserve">
-    <value>FrameDataGridView</value>
-  </data>
-  <data name="&gt;&gt;FrameDataGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FrameDataGridView.Parent" xml:space="preserve">
-    <value>EditPanel</value>
-  </data>
-  <data name="&gt;&gt;FrameDataGridView.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="SlotName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="SlotName.HeaderText" xml:space="preserve">
-    <value>Имя слота</value>
-  </data>
-  <metadata name="SlotType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="SlotType.HeaderText" xml:space="preserve">
-    <value>Тип слота</value>
-  </data>
-  <metadata name="SlotValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="SlotValue.HeaderText" xml:space="preserve">
-    <value>Значение</value>
-  </data>
-  <data name="&gt;&gt;EditBtn.Name" xml:space="preserve">
-    <value>EditBtn</value>
-  </data>
-  <data name="&gt;&gt;EditBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditBtn.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;EditBtn.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 511</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 44</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>panelDataView</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="EditBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 6</value>
-  </data>
-  <data name="EditBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 33</value>
-  </data>
-  <data name="EditBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="EditBtn.Text" xml:space="preserve">
-    <value>Редактировать</value>
-  </data>
-  <data name="&gt;&gt;EditBtn.Name" xml:space="preserve">
-    <value>EditBtn</value>
-  </data>
-  <data name="&gt;&gt;EditBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditBtn.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;EditBtn.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

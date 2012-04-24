@@ -471,7 +471,7 @@
             // panelGameField
             // 
             resources.ApplyResources(this.panelGameField, "panelGameField");
-            this.panelGameField.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelGameField.BackColor = System.Drawing.Color.Transparent;
             this.panelGameField.Name = "panelGameField";
             // 
             // panelGameControls
