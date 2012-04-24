@@ -264,90 +264,6 @@
   <data name="доменыToolStripMenuItem.Text" xml:space="preserve">
     <value>Домены</value>
   </data>
-  <data name="&gt;&gt;tabController.Name" xml:space="preserve">
-    <value>tabController</value>
-  </data>
-  <data name="&gt;&gt;tabController.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabController.Parent" xml:space="preserve">
-    <value>MainPanel</value>
-  </data>
-  <data name="&gt;&gt;tabController.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="MainPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="MainPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 25</value>
-  </data>
-  <data name="MainPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>937, 587</value>
-  </data>
-  <data name="MainPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;MainPanel.Name" xml:space="preserve">
-    <value>MainPanel</value>
-  </data>
-  <data name="&gt;&gt;MainPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MainPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MainPanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;FramePage.Name" xml:space="preserve">
-    <value>FramePage</value>
-  </data>
-  <data name="&gt;&gt;FramePage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FramePage.Parent" xml:space="preserve">
-    <value>tabController</value>
-  </data>
-  <data name="&gt;&gt;FramePage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GamePage.Name" xml:space="preserve">
-    <value>GamePage</value>
-  </data>
-  <data name="&gt;&gt;GamePage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GamePage.Parent" xml:space="preserve">
-    <value>tabController</value>
-  </data>
-  <data name="&gt;&gt;GamePage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tabController.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tabController.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tabController.Size" type="System.Drawing.Size, System.Drawing">
-    <value>937, 587</value>
-  </data>
-  <data name="tabController.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabController.Name" xml:space="preserve">
-    <value>tabController</value>
-  </data>
-  <data name="&gt;&gt;tabController.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabController.Parent" xml:space="preserve">
-    <value>MainPanel</value>
-  </data>
-  <data name="&gt;&gt;tabController.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;panelDiagramm.Name" xml:space="preserve">
     <value>panelDiagramm</value>
   </data>
@@ -398,6 +314,228 @@
   </data>
   <data name="&gt;&gt;FramePage.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="panelGameField.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="panelGameField.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelGameField.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 3</value>
+  </data>
+  <data name="panelGameField.Size" type="System.Drawing.Size, System.Drawing">
+    <value>723, 555</value>
+  </data>
+  <data name="panelGameField.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelGameField.Name" xml:space="preserve">
+    <value>panelGameField</value>
+  </data>
+  <data name="&gt;&gt;panelGameField.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelGameField.Parent" xml:space="preserve">
+    <value>GamePage</value>
+  </data>
+  <data name="&gt;&gt;panelGameField.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labOffset.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labOffset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 122</value>
+  </data>
+  <data name="labOffset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 13</value>
+  </data>
+  <data name="labOffset.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labOffset.Text" xml:space="preserve">
+    <value>Отступ</value>
+  </data>
+  <data name="&gt;&gt;labOffset.Name" xml:space="preserve">
+    <value>labOffset</value>
+  </data>
+  <data name="&gt;&gt;labOffset.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labOffset.Parent" xml:space="preserve">
+    <value>panelGameControls</value>
+  </data>
+  <data name="&gt;&gt;labOffset.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labCellSize.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labCellSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 91</value>
+  </data>
+  <data name="labCellSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="labCellSize.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labCellSize.Text" xml:space="preserve">
+    <value>Размер ячеек</value>
+  </data>
+  <data name="&gt;&gt;labCellSize.Name" xml:space="preserve">
+    <value>labCellSize</value>
+  </data>
+  <data name="&gt;&gt;labCellSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labCellSize.Parent" xml:space="preserve">
+    <value>panelGameControls</value>
+  </data>
+  <data name="&gt;&gt;labCellSize.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="nudCellOffset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 115</value>
+  </data>
+  <data name="nudCellOffset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="nudCellOffset.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;nudCellOffset.Name" xml:space="preserve">
+    <value>nudCellOffset</value>
+  </data>
+  <data name="&gt;&gt;nudCellOffset.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudCellOffset.Parent" xml:space="preserve">
+    <value>panelGameControls</value>
+  </data>
+  <data name="&gt;&gt;nudCellOffset.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="nudCellSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 89</value>
+  </data>
+  <data name="nudCellSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="nudCellSize.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;nudCellSize.Name" xml:space="preserve">
+    <value>nudCellSize</value>
+  </data>
+  <data name="&gt;&gt;nudCellSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudCellSize.Parent" xml:space="preserve">
+    <value>panelGameControls</value>
+  </data>
+  <data name="&gt;&gt;nudCellSize.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panelGameControls.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="panelGameControls.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="panelGameControls.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 555</value>
+  </data>
+  <data name="panelGameControls.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelGameControls.Name" xml:space="preserve">
+    <value>panelGameControls</value>
+  </data>
+  <data name="&gt;&gt;panelGameControls.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelGameControls.Parent" xml:space="preserve">
+    <value>GamePage</value>
+  </data>
+  <data name="&gt;&gt;panelGameControls.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GamePage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="GamePage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="GamePage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>929, 561</value>
+  </data>
+  <data name="GamePage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GamePage.Text" xml:space="preserve">
+    <value>Саванна </value>
+  </data>
+  <data name="&gt;&gt;GamePage.Name" xml:space="preserve">
+    <value>GamePage</value>
+  </data>
+  <data name="&gt;&gt;GamePage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GamePage.Parent" xml:space="preserve">
+    <value>tabController</value>
+  </data>
+  <data name="&gt;&gt;GamePage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabController.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabController.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabController.Size" type="System.Drawing.Size, System.Drawing">
+    <value>937, 587</value>
+  </data>
+  <data name="tabController.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabController.Name" xml:space="preserve">
+    <value>tabController</value>
+  </data>
+  <data name="&gt;&gt;tabController.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabController.Parent" xml:space="preserve">
+    <value>MainPanel</value>
+  </data>
+  <data name="&gt;&gt;tabController.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="MainPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="MainPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
+  </data>
+  <data name="MainPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>937, 587</value>
+  </data>
+  <data name="MainPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;MainPanel.Name" xml:space="preserve">
+    <value>MainPanel</value>
+  </data>
+  <data name="&gt;&gt;MainPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MainPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MainPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>256, 17</value>
@@ -860,33 +998,6 @@
   </data>
   <data name="&gt;&gt;EditBtn.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="GamePage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="GamePage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="GamePage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>929, 561</value>
-  </data>
-  <data name="GamePage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="GamePage.Text" xml:space="preserve">
-    <value>Саванна </value>
-  </data>
-  <data name="&gt;&gt;GamePage.Name" xml:space="preserve">
-    <value>GamePage</value>
-  </data>
-  <data name="&gt;&gt;GamePage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GamePage.Parent" xml:space="preserve">
-    <value>tabController</value>
-  </data>
-  <data name="&gt;&gt;GamePage.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

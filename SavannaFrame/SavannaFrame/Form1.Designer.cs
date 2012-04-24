@@ -78,6 +78,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.EditBtn = new System.Windows.Forms.Button();
             this.GamePage = new System.Windows.Forms.TabPage();
+            this.panelGameField = new System.Windows.Forms.Panel();
+            this.panelGameControls = new System.Windows.Forms.Panel();
+            this.labOffset = new System.Windows.Forms.Label();
+            this.labCellSize = new System.Windows.Forms.Label();
+            this.nudCellOffset = new System.Windows.Forms.NumericUpDown();
+            this.nudCellSize = new System.Windows.Forms.NumericUpDown();
             this.topPanelMainMenu.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -91,6 +97,10 @@
             this.EditPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FrameDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
+            this.GamePage.SuspendLayout();
+            this.panelGameControls.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCellOffset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCellSize)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanelMainMenu
@@ -452,9 +462,68 @@
             // 
             // GamePage
             // 
+            this.GamePage.Controls.Add(this.panelGameField);
+            this.GamePage.Controls.Add(this.panelGameControls);
             resources.ApplyResources(this.GamePage, "GamePage");
             this.GamePage.Name = "GamePage";
             this.GamePage.UseVisualStyleBackColor = true;
+            // 
+            // panelGameField
+            // 
+            resources.ApplyResources(this.panelGameField, "panelGameField");
+            this.panelGameField.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelGameField.Name = "panelGameField";
+            // 
+            // panelGameControls
+            // 
+            this.panelGameControls.Controls.Add(this.labOffset);
+            this.panelGameControls.Controls.Add(this.labCellSize);
+            this.panelGameControls.Controls.Add(this.nudCellOffset);
+            this.panelGameControls.Controls.Add(this.nudCellSize);
+            resources.ApplyResources(this.panelGameControls, "panelGameControls");
+            this.panelGameControls.Name = "panelGameControls";
+            // 
+            // labOffset
+            // 
+            resources.ApplyResources(this.labOffset, "labOffset");
+            this.labOffset.Name = "labOffset";
+            // 
+            // labCellSize
+            // 
+            resources.ApplyResources(this.labCellSize, "labCellSize");
+            this.labCellSize.Name = "labCellSize";
+            // 
+            // nudCellOffset
+            // 
+            resources.ApplyResources(this.nudCellOffset, "nudCellOffset");
+            this.nudCellOffset.Name = "nudCellOffset";
+            this.nudCellOffset.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudCellOffset.ValueChanged += new System.EventHandler(this.nudCellOffset_ValueChanged);
+            // 
+            // nudCellSize
+            // 
+            resources.ApplyResources(this.nudCellSize, "nudCellSize");
+            this.nudCellSize.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudCellSize.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudCellSize.Name = "nudCellSize";
+            this.nudCellSize.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nudCellSize.ValueChanged += new System.EventHandler(this.nudCellSize_ValueChanged);
             // 
             // MainForm
             // 
@@ -482,6 +551,11 @@
             this.EditPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FrameDataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.GamePage.ResumeLayout(false);
+            this.panelGameControls.ResumeLayout(false);
+            this.panelGameControls.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCellOffset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCellSize)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -536,6 +610,12 @@
         private System.Windows.Forms.ToolStripMenuItem удалитьСлотToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem удалитьФреймToolStripMenuItem;
+        private System.Windows.Forms.Panel panelGameField;
+        private System.Windows.Forms.Panel panelGameControls;
+        private System.Windows.Forms.Label labOffset;
+        private System.Windows.Forms.Label labCellSize;
+        private System.Windows.Forms.NumericUpDown nudCellOffset;
+        private System.Windows.Forms.NumericUpDown nudCellSize;
     }
 }
 

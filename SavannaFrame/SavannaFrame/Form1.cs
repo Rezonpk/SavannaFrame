@@ -15,10 +15,15 @@ namespace SavannaFrame
     public partial class MainForm : Form
     {
         public Point StartLinkPoint, EndLinkPoint;
-        
+        private GameField gameField;        
         public MainForm()
         {
             InitializeComponent();
+            panelGameField.SuspendLayout();
+            gameField = new GameField(10, 10);
+            gameField.Dock = DockStyle.Fill;
+            panelGameField.Controls.Add(gameField);
+            panelGameField.ResumeLayout();
             cmbTypeLink.SelectedIndex = 0;
             cmbZoom.SelectedIndex = 2;
             StartLinkPoint = new Point();
@@ -514,7 +519,17 @@ namespace SavannaFrame
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
         }
+
+        private void nudCellSize_ValueChanged(object sender, EventArgs e)
+        {
+            gameField.CellSize = (int)nudCellSize.Value;
+        }
+
+        private void nudCellOffset_ValueChanged(object sender, EventArgs e)
+        {
+            gameField.CellOffset = (int)nudCellOffset.Value;
+        }
+
     }
 }
