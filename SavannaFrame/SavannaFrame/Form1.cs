@@ -31,10 +31,6 @@ namespace SavannaFrame
             //List<Frame>
         }
 
-        
-
-        
-
         private void FraimDiagram_NodeCreated(object sender, MindFusion.Diagramming.NodeEventArgs e)
         {
             ShapeNode node = e.Node as ShapeNode;

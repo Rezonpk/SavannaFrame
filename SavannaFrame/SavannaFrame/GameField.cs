@@ -198,10 +198,11 @@ namespace SavannaFrame
     /// <summary>
     /// Класс, отвечающий за отображение одной ячейки игрового поля.
     /// </summary>
-    public class GameCell : PictureBox
+    public class GameCell : Panel
     {
         private int x, y;
         private GameField gameField;
+        PictureBox pictureBox;
         
         /// <summary>
         /// Индекс строки ячейки на игровом поле
@@ -241,10 +242,16 @@ namespace SavannaFrame
         /// <param name="size">Размер ячейки (в пикселях).</param>
         public GameCell(GameField gameField, int x, int y, int size) : base()
         {
+            pictureBox = new PictureBox();
+            pictureBox.Dock = DockStyle.Fill;
+            this.Controls.Add(pictureBox);
+            this.AllowDrop = true;
+
+
             this.gameField = gameField;
             this.Size = size;
-            this.SizeMode = PictureBoxSizeMode.StretchImage;
-            this.Image = Image.FromFile("Images\\grass.jpg"); //пусть пока будет так :) Значение по умолчанию - трава.
+            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox.Image = Image.FromFile("Images\\grass.jpg"); //пусть пока будет так :) Значение по умолчанию - трава.
             this.x = x;
             this.y = y;
         }
