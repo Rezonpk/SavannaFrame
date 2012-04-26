@@ -13,6 +13,9 @@ namespace SavannaFrame.Classes
     {
         private List<Frame> framesList=null;
 
+        /// <summary>
+        /// Обновленный список фреймов
+        /// </summary>
         public List<Frame> FramesList
         {
             get
@@ -31,11 +34,14 @@ namespace SavannaFrame.Classes
 
     public class KnowLedgeBase
     {
-        // тут пока хз че (ну а так тут короче объединение переменных доменов и правил и действия с ними))
         public static List<Frame> Frames = new List<Frame>();
         public static int MaxFrameId = 0;
         public static int MaxSlotId = 0;
 
+        /// <summary>
+        /// Событие изменения списка фреймов (добавление/удаление фрейма, загрузка другой БЗ, изменение связей "is a" между фреймами).
+        /// На данный момент НЕ вызывается при добавлении/удалении связи "subframe".
+        /// </summary>
         public event FramesChagedEventHandler FramesChangedEvent; 
 
         public KnowLedgeBase()

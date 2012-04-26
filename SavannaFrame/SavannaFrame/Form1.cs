@@ -15,7 +15,8 @@ namespace SavannaFrame
     public partial class MainForm : Form
     {
         public Point StartLinkPoint, EndLinkPoint;
-        private GameField gameField;        
+        private GameField gameField;
+  
         public MainForm()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace SavannaFrame
             gameField.Dock = DockStyle.Fill;
             splitGameField.Panel1.Controls.Add(gameField);
             splitGameField.Panel1.ResumeLayout();
+
             cmbTypeLink.SelectedIndex = 0;
             cmbZoom.SelectedIndex = 2;
             StartLinkPoint = new Point();
@@ -55,12 +57,8 @@ namespace SavannaFrame
 
         private void FrameDiagram_LinkCreated(object sender, LinkEventArgs e)
         {
-            Frame frame = new Frame();
-            Frame frame1 = new Frame(); 
-
-            Frame frameUpper;// = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)e.Link.Destination.Id);
-            Frame frameLower;
-            string str = "";
+            Frame frameUpper; //тот фрейм, к которому идет дуга
+            Frame frameLower; //тот фрейм, от которого идет дуга
             switch (cmbTypeLink.SelectedIndex)
             {
                 case 0:
@@ -70,32 +68,10 @@ namespace SavannaFrame
                     frameUpper = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)e.Link.Destination.Id);
                     frameLower = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)e.Link.Origin.Id);
 
-                    //foreach (DiagramNode node in FrameDiagram.Nodes)
-                    //{
-                    //    if (node.GetBounds().Contains(StartLinkPoint.X, StartLinkPoint.Y))
-                    //    {
-                    //        if (cmbTypeLink.SelectedIndex == 0)
-                    //        {
-                    //            frame = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)node.Id);
-                    //        }
-                        
-                    //        str = node.Id.ToString() + cmbTypeLink.SelectedItem.ToString();
-                    //    }
-                    //    if (node.GetBounds().Contains(EndLinkPoint.X, EndLinkPoint.Y))
-                    //    {
-                    //        frame1 = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)node.Id);
-                    //    }
-
-                    //}
-
-                    //frame.IsA.ParentId = frame1.FrameId;
-                    //frame.IsA.SlotDefault = frame1.FrameName;
-                    //frame.IsA.frameId = frame1.FrameId;
-
                     frameLower.IsA.ParentId = frameUpper.FrameId;
                     frameLower.IsA.SlotDefault = frameUpper.FrameName;
                     frameLower.IsA.frameId = frameUpper.FrameId;
-                    ClassFactory.kBase.AddIsA(frame); //простор для оптимизации
+                    ClassFactory.kBase.AddIsA(frameLower); //простор для оптимизации
                     break;
                 case 1:
                     e.Link.Text = "Sub";
@@ -105,35 +81,10 @@ namespace SavannaFrame
                     frameUpper = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)e.Link.Destination.Id);
                     frameLower = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)e.Link.Origin.Id);
 
-                    //foreach (DiagramNode node in FrameDiagram.Nodes)
-                    //{
-                    //    if (node.GetBounds().Contains(StartLinkPoint.X, StartLinkPoint.Y))
-                    //    {
-                    //        if (cmbTypeLink.SelectedIndex == 0)
-                    //        {
-                    //            frame = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)node.Id);
-
-                    //        }
-
-                    //        str = node.Id.ToString() + cmbTypeLink.SelectedItem.ToString();
-                    //    }
-                    //    if (node.GetBounds().Contains(EndLinkPoint.X, EndLinkPoint.Y))
-                    //    {
-                    //        frame1 = ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)node.Id);
-                    //    }
-                    //}
-
                     Slot slotSubframe = new Slot(){ IsSystem = false, frameId = frameLower.FrameId, ParentId = frameUpper.FrameId, SlotName="sub", SlotType = Classes.SlotType.Frame};
                     frameUpper.FrameSlots.Add(slotSubframe);
                     break;
             }
-
-
-            
-
-            
-            //MessageBox.Show(str + str1);
-
         }
 
         private void diagramView_MouseDown(object sender, MouseEventArgs e)
@@ -174,8 +125,6 @@ namespace SavannaFrame
 
         private void FrameDiagram_NodeSelected(object sender, NodeEventArgs e)
         {
-            //foreach (DiagramNode node1 in FrameDiagram.Nodes)
-            //    node1.Brush = new SolidBrush(Color.PowderBlue);
             e.Node.Brush = new SolidBrush(Color.Pink);
             List<Frame> frmlst = ClassFactory.kBase.FrameList();
             Frame frm = frmlst.Find(f => f.FrameId == (int)e.Node.Id);
@@ -197,7 +146,6 @@ namespace SavannaFrame
 
         private void FrameTreeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            //FrameDataGridView.DataSource = ClassFactory.kBase.EditGridSlots(e.Node.Text);
             List<Frame> frmlst = ClassFactory.kBase.FrameList();
             Frame frm = frmlst.Find(f => f.FrameName == e.Node.Text);
             foreach (DiagramNode node in FrameDiagram.Nodes)
@@ -293,8 +241,6 @@ namespace SavannaFrame
             if (svf.ShowDialog() == DialogResult.OK)
             {
                 ClassFactory.SaveKBase(svf.FileName);
-                //MessageBox.Show("База знаний успешно сохранена!!!!", "Информация",
-                //   MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
@@ -339,16 +285,6 @@ namespace SavannaFrame
                 node.TextFormat.LineAlignment = StringAlignment.Center;
                 node.SetBounds(new RectangleF(new PointF(frm.X, frm.Y), new SizeF(100, 30)), true, true);
                 FrameDiagram.Nodes.Add(node);
-
-                //if (frm.IsA != null)
-                //{
-                //    DiagramNode from, destination;
-                //    from=
-                //    DiagramLink link=new DiagramLink(FrameDiagram, origin, destination);
-
-                //    //FrameDiagram.Links.Add(
-                //}
-
             }
 
             foreach (Frame frm in curList)
@@ -391,14 +327,7 @@ namespace SavannaFrame
                         FrameDiagram.Links.Add(link);
                     }
                 }
-                //if (node.GetBounds().Contains(e.X, e.Y))
-                //{
-                //    ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)node.Id).X = e.X;
-                //    ClassFactory.kBase.FrameList().Find(f => f.FrameId == (int)node.Id).Y = e.Y;
-                //}
             }
-            //FrameDiagram.Links.
-
         }
 
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -515,10 +444,6 @@ namespace SavannaFrame
             }
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-        }
-
         private void nudCellSize_ValueChanged(object sender, EventArgs e)
         {
             gameField.CellSize = (int)nudCellSize.Value;
@@ -529,70 +454,8 @@ namespace SavannaFrame
             gameField.CellOffset = (int)nudCellOffset.Value;
         }
 
-        private void bTest_Click(object sender, EventArgs e)
-        {
-            ImageList list = new ImageList();
-            
-            list.Images.Add("grass", Image.FromFile(@"Images\grass.jpg"));
-            list.Images.Add("zebra", Image.FromFile(@"Images\zebra.jpg"));
-            list.Images.Add("gyena", Image.FromFile(@"Images\gyena.jpg"));
-            list.Images.Add("warthog", Image.FromFile(@"Images\warthog.jpg"));
-            list.Images.Add("lion", Image.FromFile(@"Images\lion.jpg"));
-            list.Images.Add("lion2", Image.FromFile(@"Images\lion2.png"));
-            list.Images.Add("bush", Image.FromFile(@"Images\bush.png"));
-
-            //this.listView1.LargeImageList = list;
-            //this.listView2.LargeImageList = list;
-
-            //this.listView1.SmallImageList = list;
-            //this.listView1.StateImageList = list;
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            List<string> indices = new List<string>();
-            indices.Add("grass");
-            indices.Add("zebra");
-            indices.Add("gyena");
-            indices.Add("warthog");
-            indices.Add("lion");
-            indices.Add("lion2");
-            indices.Add("bush");
-            Random r = new Random();
-            for (int i = 0; i < 5; i++)
-            {                
-                int randomIndex = r.Next(indices.Count-1);
-                ListViewItem item=new ListViewItem(indices[randomIndex], indices[randomIndex]);
-                //listView1.Items.Add(item);
-            }
-
-        }
-
-        private void listView1_ItemDrag(object sender, ItemDragEventArgs e)
-        {
-            this.DoDragDrop(e.Item, DragDropEffects.Copy);
-        }
-
-        private void listView2_DragEnter(object sender, DragEventArgs e)
-        {
-            ListViewItem item = new ListViewItem();
-            
-            if (e.Data.GetDataPresent(typeof(ListViewItem)))
-            {
-                e.Effect = DragDropEffects.Copy;
-            }
-        }
-
-        private void listView2_DragDrop(object sender, DragEventArgs e)
-        {
-            ListViewItem draggedItem = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
-            ListViewItem addedItem = new ListViewItem(draggedItem.Text, draggedItem.Text);
-            (sender as ListView).Items.Add(addedItem);
-        }
-
         /// <summary>
-        /// Обновляет список объектов (lvObjects)
+        /// Обновляет список объектов (lvObjects). Является обработчиком для kBase.FramesChangedEvent
         /// </summary>
         public void updateObjectsList(object sender, FramesChangedEventArgs args)
         {

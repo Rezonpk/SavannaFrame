@@ -38,7 +38,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.Name = "GameField";
             this.Size = new System.Drawing.Size(536, 459);
-            this.Load += new System.EventHandler(this.GameField_Load);
             this.ResumeLayout(false);
 
         }

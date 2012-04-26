@@ -183,16 +183,6 @@ namespace SavannaFrame
             InitializeComponent();
             this.setSize(rowsCount, columnsCount);
         }
-
-        private void GameField_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelMain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 
     /// <summary>
@@ -202,7 +192,10 @@ namespace SavannaFrame
     {
         private int x, y;
         private GameField gameField;
-        PictureBox pictureBox;
+        //Раньше наследовали от pictureBox'а просто, но он не поддерживает нормальный drag&drop :(приходится так, с костылями. 
+        //Сам контрол - панель, а на нем - pictureBox с нужной картинкой.
+        PictureBox pictureBox; 
+ 
         
         /// <summary>
         /// Индекс строки ячейки на игровом поле
@@ -258,6 +251,12 @@ namespace SavannaFrame
             this.DragDrop += new DragEventHandler(GameCell_DragDrop);
         }
 
+        /// <summary>
+        /// Срабатывает, когда мышка в режиме Drag&drop входит в пределы контрола. Тут нужно проверить, перетаскивает ли она то, что мы можем обработать,
+        /// и если да, то выставить нужный режим drag&drop'а.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void GameCell_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(typeof(ListViewItem))) //пока будет так
@@ -266,6 +265,12 @@ namespace SavannaFrame
             }
         }
 
+        /// <summary>
+        /// Срабатывает, когда пользователь сбрасывает что-то в контрол. Важно: абы что сбросить не получится (см. GameCell_DragEnter).
+        /// Собственно, обрабатываем это событие.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void GameCell_DragDrop(object sender, DragEventArgs e)
         {
             ListViewItem draggedItem = (ListViewItem)e.Data.GetData(typeof(ListViewItem));

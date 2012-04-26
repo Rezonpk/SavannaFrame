@@ -584,7 +584,6 @@
             this.Controls.Add(this.topPanelMainMenu);
             this.MainMenuStrip = this.MainMenu;
             this.Name = "MainForm";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.splitGameField.Panel2.ResumeLayout(false);
             this.splitGameField.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitGameField)).EndInit();
