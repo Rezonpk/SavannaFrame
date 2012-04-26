@@ -254,8 +254,22 @@ namespace SavannaFrame
             pictureBox.Image = Image.FromFile("Images\\grass.jpg"); //пусть пока будет так :) Значение по умолчанию - трава.
             this.x = x;
             this.y = y;
+            this.DragEnter += new DragEventHandler(GameCell_DragEnter);
+            this.DragDrop += new DragEventHandler(GameCell_DragDrop);
         }
 
+        void GameCell_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof(ListViewItem))) //пока будет так
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+        }
 
+        void GameCell_DragDrop(object sender, DragEventArgs e)
+        {
+            ListViewItem draggedItem = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
+            this.pictureBox.Image = draggedItem.ImageList.Images[draggedItem.ImageKey];
+        }
     }
 }

@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.splitGameField = new System.Windows.Forms.SplitContainer();
+            this.rtbLOR = new System.Windows.Forms.RichTextBox();
+            this.labLOR = new System.Windows.Forms.Label();
             this.topPanelMainMenu = new System.Windows.Forms.Panel();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +48,7 @@
             this.играToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.tabController = new System.Windows.Forms.TabControl();
+            this.panelOptions = new System.Windows.Forms.TabControl();
             this.FramePage = new System.Windows.Forms.TabPage();
             this.panelDiagramm = new System.Windows.Forms.Panel();
             this.diagramView = new MindFusion.Diagramming.WinForms.DiagramView();
@@ -78,16 +81,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.EditBtn = new System.Windows.Forms.Button();
             this.GamePage = new System.Windows.Forms.TabPage();
-            this.panelGameField = new System.Windows.Forms.Panel();
             this.panelGameControls = new System.Windows.Forms.Panel();
-            this.labOffset = new System.Windows.Forms.Label();
-            this.labCellSize = new System.Windows.Forms.Label();
-            this.nudCellOffset = new System.Windows.Forms.NumericUpDown();
+            this.lvObjects = new System.Windows.Forms.ListView();
+            this.labObjectsList = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.nudCellSize = new System.Windows.Forms.NumericUpDown();
+            this.nudCellOffset = new System.Windows.Forms.NumericUpDown();
+            this.labCellSize = new System.Windows.Forms.Label();
+            this.labOffset = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.splitGameField)).BeginInit();
+            this.splitGameField.Panel2.SuspendLayout();
+            this.splitGameField.SuspendLayout();
             this.topPanelMainMenu.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.MainPanel.SuspendLayout();
-            this.tabController.SuspendLayout();
+            this.panelOptions.SuspendLayout();
             this.FramePage.SuspendLayout();
             this.panelDiagramm.SuspendLayout();
             this.DiagramContextMenu.SuspendLayout();
@@ -99,9 +107,37 @@
             this.panel1.SuspendLayout();
             this.GamePage.SuspendLayout();
             this.panelGameControls.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCellOffset)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCellSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCellOffset)).BeginInit();
             this.SuspendLayout();
+            // 
+            // splitGameField
+            // 
+            resources.ApplyResources(this.splitGameField, "splitGameField");
+            this.splitGameField.Name = "splitGameField";
+            // 
+            // splitGameField.Panel1
+            // 
+            resources.ApplyResources(this.splitGameField.Panel1, "splitGameField.Panel1");
+            // 
+            // splitGameField.Panel2
+            // 
+            this.splitGameField.Panel2.Controls.Add(this.rtbLOR);
+            this.splitGameField.Panel2.Controls.Add(this.labLOR);
+            resources.ApplyResources(this.splitGameField.Panel2, "splitGameField.Panel2");
+            // 
+            // rtbLOR
+            // 
+            this.rtbLOR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.rtbLOR, "rtbLOR");
+            this.rtbLOR.Name = "rtbLOR";
+            this.rtbLOR.ReadOnly = true;
+            // 
+            // labLOR
+            // 
+            resources.ApplyResources(this.labLOR, "labLOR");
+            this.labLOR.Name = "labLOR";
             // 
             // topPanelMainMenu
             // 
@@ -197,17 +233,17 @@
             // 
             // MainPanel
             // 
-            this.MainPanel.Controls.Add(this.tabController);
+            this.MainPanel.Controls.Add(this.panelOptions);
             resources.ApplyResources(this.MainPanel, "MainPanel");
             this.MainPanel.Name = "MainPanel";
             // 
-            // tabController
+            // panelOptions
             // 
-            this.tabController.Controls.Add(this.FramePage);
-            this.tabController.Controls.Add(this.GamePage);
-            resources.ApplyResources(this.tabController, "tabController");
-            this.tabController.Name = "tabController";
-            this.tabController.SelectedIndex = 0;
+            this.panelOptions.Controls.Add(this.FramePage);
+            this.panelOptions.Controls.Add(this.GamePage);
+            resources.ApplyResources(this.panelOptions, "panelOptions");
+            this.panelOptions.Name = "panelOptions";
+            this.panelOptions.SelectedIndex = 0;
             // 
             // FramePage
             // 
@@ -462,47 +498,41 @@
             // 
             // GamePage
             // 
-            this.GamePage.Controls.Add(this.panelGameField);
+            this.GamePage.Controls.Add(this.splitGameField);
             this.GamePage.Controls.Add(this.panelGameControls);
             resources.ApplyResources(this.GamePage, "GamePage");
             this.GamePage.Name = "GamePage";
             this.GamePage.UseVisualStyleBackColor = true;
             // 
-            // panelGameField
-            // 
-            resources.ApplyResources(this.panelGameField, "panelGameField");
-            this.panelGameField.BackColor = System.Drawing.Color.Transparent;
-            this.panelGameField.Name = "panelGameField";
-            // 
             // panelGameControls
             // 
-            this.panelGameControls.Controls.Add(this.labOffset);
-            this.panelGameControls.Controls.Add(this.labCellSize);
-            this.panelGameControls.Controls.Add(this.nudCellOffset);
-            this.panelGameControls.Controls.Add(this.nudCellSize);
+            this.panelGameControls.Controls.Add(this.lvObjects);
+            this.panelGameControls.Controls.Add(this.labObjectsList);
+            this.panelGameControls.Controls.Add(this.panel2);
             resources.ApplyResources(this.panelGameControls, "panelGameControls");
             this.panelGameControls.Name = "panelGameControls";
             // 
-            // labOffset
+            // lvObjects
             // 
-            resources.ApplyResources(this.labOffset, "labOffset");
-            this.labOffset.Name = "labOffset";
+            this.lvObjects.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.lvObjects, "lvObjects");
+            this.lvObjects.Name = "lvObjects";
+            this.lvObjects.UseCompatibleStateImageBehavior = false;
+            this.lvObjects.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lvObjects_ItemDrag);
             // 
-            // labCellSize
+            // labObjectsList
             // 
-            resources.ApplyResources(this.labCellSize, "labCellSize");
-            this.labCellSize.Name = "labCellSize";
+            resources.ApplyResources(this.labObjectsList, "labObjectsList");
+            this.labObjectsList.Name = "labObjectsList";
             // 
-            // nudCellOffset
+            // panel2
             // 
-            resources.ApplyResources(this.nudCellOffset, "nudCellOffset");
-            this.nudCellOffset.Name = "nudCellOffset";
-            this.nudCellOffset.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudCellOffset.ValueChanged += new System.EventHandler(this.nudCellOffset_ValueChanged);
+            this.panel2.Controls.Add(this.nudCellSize);
+            this.panel2.Controls.Add(this.nudCellOffset);
+            this.panel2.Controls.Add(this.labCellSize);
+            this.panel2.Controls.Add(this.labOffset);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
             // 
             // nudCellSize
             // 
@@ -525,6 +555,27 @@
             0});
             this.nudCellSize.ValueChanged += new System.EventHandler(this.nudCellSize_ValueChanged);
             // 
+            // nudCellOffset
+            // 
+            resources.ApplyResources(this.nudCellOffset, "nudCellOffset");
+            this.nudCellOffset.Name = "nudCellOffset";
+            this.nudCellOffset.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudCellOffset.ValueChanged += new System.EventHandler(this.nudCellOffset_ValueChanged);
+            // 
+            // labCellSize
+            // 
+            resources.ApplyResources(this.labCellSize, "labCellSize");
+            this.labCellSize.Name = "labCellSize";
+            // 
+            // labOffset
+            // 
+            resources.ApplyResources(this.labOffset, "labOffset");
+            this.labOffset.Name = "labOffset";
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -534,12 +585,16 @@
             this.MainMenuStrip = this.MainMenu;
             this.Name = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.splitGameField.Panel2.ResumeLayout(false);
+            this.splitGameField.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitGameField)).EndInit();
+            this.splitGameField.ResumeLayout(false);
             this.topPanelMainMenu.ResumeLayout(false);
             this.topPanelMainMenu.PerformLayout();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.MainPanel.ResumeLayout(false);
-            this.tabController.ResumeLayout(false);
+            this.panelOptions.ResumeLayout(false);
             this.FramePage.ResumeLayout(false);
             this.panelDiagramm.ResumeLayout(false);
             this.panelDiagramm.PerformLayout();
@@ -554,8 +609,10 @@
             this.GamePage.ResumeLayout(false);
             this.panelGameControls.ResumeLayout(false);
             this.panelGameControls.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCellOffset)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCellSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCellOffset)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -565,7 +622,7 @@
         private System.Windows.Forms.Panel topPanelMainMenu;
         private System.Windows.Forms.MenuStrip MainMenu;
         private System.Windows.Forms.Panel MainPanel;
-        private System.Windows.Forms.TabControl tabController;
+        private System.Windows.Forms.TabControl panelOptions;
         private System.Windows.Forms.TabPage FramePage;
         private System.Windows.Forms.TabPage GamePage;
         private System.Windows.Forms.Panel panelDataView;
@@ -610,12 +667,17 @@
         private System.Windows.Forms.ToolStripMenuItem удалитьСлотToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem удалитьФреймToolStripMenuItem;
-        private System.Windows.Forms.Panel panelGameField;
         private System.Windows.Forms.Panel panelGameControls;
         private System.Windows.Forms.Label labOffset;
         private System.Windows.Forms.Label labCellSize;
         private System.Windows.Forms.NumericUpDown nudCellOffset;
         private System.Windows.Forms.NumericUpDown nudCellSize;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ListView lvObjects;
+        private System.Windows.Forms.Label labObjectsList;
+        private System.Windows.Forms.SplitContainer splitGameField;
+        private System.Windows.Forms.RichTextBox rtbLOR;
+        private System.Windows.Forms.Label labLOR;
     }
 }
 

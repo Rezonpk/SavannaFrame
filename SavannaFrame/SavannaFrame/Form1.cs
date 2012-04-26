@@ -19,16 +19,18 @@ namespace SavannaFrame
         public MainForm()
         {
             InitializeComponent();
-            panelGameField.SuspendLayout();
+
+            splitGameField.Panel1.SuspendLayout();
             gameField = new GameField(10, 10);
             gameField.Dock = DockStyle.Fill;
-            panelGameField.Controls.Add(gameField);
-            panelGameField.ResumeLayout();
+            splitGameField.Panel1.Controls.Add(gameField);
+            splitGameField.Panel1.ResumeLayout();
             cmbTypeLink.SelectedIndex = 0;
             cmbZoom.SelectedIndex = 2;
             StartLinkPoint = new Point();
             EndLinkPoint = new Point();
-            //List<Frame>
+
+            ClassFactory.kBase.FramesChangedEvent+=new FramesChagedEventHandler(this.updateObjectsList);
         }
 
         private void FraimDiagram_NodeCreated(object sender, MindFusion.Diagramming.NodeEventArgs e)
@@ -525,6 +527,107 @@ namespace SavannaFrame
         private void nudCellOffset_ValueChanged(object sender, EventArgs e)
         {
             gameField.CellOffset = (int)nudCellOffset.Value;
+        }
+
+        private void bTest_Click(object sender, EventArgs e)
+        {
+            ImageList list = new ImageList();
+            
+            list.Images.Add("grass", Image.FromFile(@"Images\grass.jpg"));
+            list.Images.Add("zebra", Image.FromFile(@"Images\zebra.jpg"));
+            list.Images.Add("gyena", Image.FromFile(@"Images\gyena.jpg"));
+            list.Images.Add("warthog", Image.FromFile(@"Images\warthog.jpg"));
+            list.Images.Add("lion", Image.FromFile(@"Images\lion.jpg"));
+            list.Images.Add("lion2", Image.FromFile(@"Images\lion2.png"));
+            list.Images.Add("bush", Image.FromFile(@"Images\bush.png"));
+
+            //this.listView1.LargeImageList = list;
+            //this.listView2.LargeImageList = list;
+
+            //this.listView1.SmallImageList = list;
+            //this.listView1.StateImageList = list;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<string> indices = new List<string>();
+            indices.Add("grass");
+            indices.Add("zebra");
+            indices.Add("gyena");
+            indices.Add("warthog");
+            indices.Add("lion");
+            indices.Add("lion2");
+            indices.Add("bush");
+            Random r = new Random();
+            for (int i = 0; i < 5; i++)
+            {                
+                int randomIndex = r.Next(indices.Count-1);
+                ListViewItem item=new ListViewItem(indices[randomIndex], indices[randomIndex]);
+                //listView1.Items.Add(item);
+            }
+
+        }
+
+        private void listView1_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+            this.DoDragDrop(e.Item, DragDropEffects.Copy);
+        }
+
+        private void listView2_DragEnter(object sender, DragEventArgs e)
+        {
+            ListViewItem item = new ListViewItem();
+            
+            if (e.Data.GetDataPresent(typeof(ListViewItem)))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+        }
+
+        private void listView2_DragDrop(object sender, DragEventArgs e)
+        {
+            ListViewItem draggedItem = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
+            ListViewItem addedItem = new ListViewItem(draggedItem.Text, draggedItem.Text);
+            (sender as ListView).Items.Add(addedItem);
+        }
+
+        /// <summary>
+        /// Обновляет список объектов (lvObjects)
+        /// </summary>
+        public void updateObjectsList(object sender, FramesChangedEventArgs args)
+        {
+            //пока тут заглушка
+            List<string> allObjects = new List<string>(7);
+            allObjects.Add("grass");
+            allObjects.Add("lion");
+            allObjects.Add("zebra");
+            allObjects.Add("warthog");
+            allObjects.Add("gyena");
+            allObjects.Add("lion2");
+            allObjects.Add("bush");
+
+            ImageList list = new ImageList();
+            list.ImageSize = new System.Drawing.Size(140, 140);
+            list.Images.Add("grass", Image.FromFile(@"Images\grass.jpg"));
+            list.Images.Add("zebra", Image.FromFile(@"Images\zebra.jpg"));
+            list.Images.Add("gyena", Image.FromFile(@"Images\gyena.jpg"));
+            list.Images.Add("warthog", Image.FromFile(@"Images\warthog.jpg"));
+            list.Images.Add("lion", Image.FromFile(@"Images\lion.jpg"));
+            list.Images.Add("lion2", Image.FromFile(@"Images\lion2.png"));
+            list.Images.Add("bush", Image.FromFile(@"Images\bush.png"));
+            
+
+            lvObjects.LargeImageList=list;
+
+            foreach (string obj in allObjects)
+            {
+                lvObjects.Items.Add(obj, obj);
+            }
+        }
+
+        private void lvObjects_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+            this.DoDragDrop(e.Item, DragDropEffects.Copy);
         }
 
     }

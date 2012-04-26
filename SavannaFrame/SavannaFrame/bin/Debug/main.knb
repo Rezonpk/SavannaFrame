@@ -24,11 +24,21 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>459</X>
-    <Y>23</Y>
+    <X>260</X>
+    <Y>183</Y>
   </Frame>
   <Frame>
-    <FrameSlots />
+    <FrameSlots>
+      <Slot>
+        <ParentId>1</ParentId>
+        <SlotName>sub</SlotName>
+        <SlotId>0</SlotId>
+        <SlotType>Frame</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+        <IsSystem>false</IsSystem>
+        <frameId>4</frameId>
+      </Slot>
+    </FrameSlots>
     <FrameName>Ситуация вокруг объекта</FrameName>
     <FrameId>1</FrameId>
     <IsA>
@@ -51,8 +61,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>404</X>
-    <Y>93</Y>
+    <X>422</X>
+    <Y>108</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -115,8 +125,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>347</X>
-    <Y>155</Y>
+    <X>381</X>
+    <Y>210</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -126,11 +136,11 @@
       <ParentId>0</ParentId>
       <SlotName>IsA</SlotName>
       <SlotId>-1</SlotId>
-      <SlotDefault>NULL</SlotDefault>
+      <SlotDefault>Ситуация</SlotDefault>
       <SlotType>Frame</SlotType>
       <SlotInheritance>Override</SlotInheritance>
       <IsSystem>true</IsSystem>
-      <frameId>-1</frameId>
+      <frameId>0</frameId>
     </IsA>
     <Error>
       <ParentId>0</ParentId>
@@ -387,5 +397,32 @@
     </Error>
     <X>933</X>
     <Y>414</Y>
+  </Frame>
+  <Frame>
+    <FrameSlots />
+    <FrameName>Игрок</FrameName>
+    <FrameId>0</FrameId>
+    <IsA>
+      <ParentId>0</ParentId>
+      <SlotName>IsA</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>NULL</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>-1</frameId>
+    </IsA>
+    <Error>
+      <ParentId>0</ParentId>
+      <SlotName>Error</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>NULL</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>-1</frameId>
+    </Error>
+    <X>238</X>
+    <Y>168</Y>
   </Frame>
 </ArrayOfFrame>

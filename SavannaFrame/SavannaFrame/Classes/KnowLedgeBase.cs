@@ -9,12 +9,34 @@ using System.Xml.Serialization;
 
 namespace SavannaFrame.Classes
 {
+    public class FramesChangedEventArgs
+    {
+        private List<Frame> framesList=null;
+
+        public List<Frame> FramesList
+        {
+            get
+            {
+                return this.framesList;
+            }
+        }
+
+        public FramesChangedEventArgs(List<Frame> framesList)
+        {
+            this.framesList = framesList;
+        }
+    }
+
+    public delegate void FramesChagedEventHandler(object sender, FramesChangedEventArgs args);
+
     public class KnowLedgeBase
     {
         // тут пока хз че (ну а так тут короче объединение переменных доменов и правил и действия с ними))
         public static List<Frame> Frames = new List<Frame>();
         public static int MaxFrameId = 0;
         public static int MaxSlotId = 0;
+
+        public event FramesChagedEventHandler FramesChangedEvent; 
 
         public KnowLedgeBase()
         {
@@ -48,6 +70,8 @@ namespace SavannaFrame.Classes
                 Frames = (List<Frame>)xmlSerializer.Deserialize(textReader);
                 textReader.Close();
                 MessageBox.Show("База знаний успешно загружена!!!!", "Информация");
+                if (this.FramesChangedEvent != null)
+                    this.FramesChangedEvent(this, new FramesChangedEventArgs(this.FrameList()));
             }
             catch
             {
@@ -85,6 +109,8 @@ namespace SavannaFrame.Classes
             if (frame != null)
             {
                 Frames.Add(frame);
+                if (this.FramesChangedEvent != null)
+                    this.FramesChangedEvent(this, new FramesChangedEventArgs(this.FrameList()));
                 return true;
             }
             return false;
@@ -96,6 +122,8 @@ namespace SavannaFrame.Classes
             {
                 int index = Frames.FindIndex(f => f.FrameName == name);
                 Frames.RemoveAt(index);
+                if (this.FramesChangedEvent != null)
+                    this.FramesChangedEvent(this, new FramesChangedEventArgs(this.FrameList()));
                 return true;
             }
             return false;
@@ -105,6 +133,8 @@ namespace SavannaFrame.Classes
         {
             // выбираем фрейм, у слота IsA присваиваем 
             Frames.Find(f => f.FrameId == frame.FrameId).IsA = frame.IsA;
+            if (this.FramesChangedEvent != null)
+                this.FramesChangedEvent(this, new FramesChangedEventArgs(this.FrameList()));
             return true;
         }
 
