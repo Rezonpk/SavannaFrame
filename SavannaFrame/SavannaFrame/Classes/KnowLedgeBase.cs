@@ -75,6 +75,13 @@ namespace SavannaFrame.Classes
                 TextReader textReader = new StreamReader(fStream);
                 Frames = (List<Frame>)xmlSerializer.Deserialize(textReader);
                 textReader.Close();
+                foreach (Frame frame in Frames)
+                {
+                    if (frame.FrameId > MaxFrameId)
+                        MaxFrameId = frame.FrameId;
+                }
+                MaxFrameId++;
+
                 MessageBox.Show("База знаний успешно загружена!!!!", "Информация");
                 if (this.FramesChangedEvent != null)
                     this.FramesChangedEvent(this, new FramesChangedEventArgs(this.FrameList()));

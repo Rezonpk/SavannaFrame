@@ -24,8 +24,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>260</X>
-    <Y>183</Y>
+    <X>459</X>
+    <Y>23</Y>
   </Frame>
   <Frame>
     <FrameSlots>
@@ -61,8 +61,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>422</X>
-    <Y>108</Y>
+    <X>433</X>
+    <Y>116</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -125,22 +125,22 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>381</X>
-    <Y>210</Y>
+    <X>384</X>
+    <Y>170</Y>
   </Frame>
   <Frame>
     <FrameSlots />
     <FrameName>Сосед</FrameName>
     <FrameId>5</FrameId>
     <IsA>
-      <ParentId>0</ParentId>
+      <ParentId>16</ParentId>
       <SlotName>IsA</SlotName>
       <SlotId>-1</SlotId>
-      <SlotDefault>Ситуация</SlotDefault>
+      <SlotDefault>Игрок</SlotDefault>
       <SlotType>Frame</SlotType>
       <SlotInheritance>Override</SlotInheritance>
       <IsSystem>true</IsSystem>
-      <frameId>0</frameId>
+      <frameId>16</frameId>
     </IsA>
     <Error>
       <ParentId>0</ParentId>
@@ -401,16 +401,16 @@
   <Frame>
     <FrameSlots />
     <FrameName>Игрок</FrameName>
-    <FrameId>0</FrameId>
+    <FrameId>16</FrameId>
     <IsA>
-      <ParentId>0</ParentId>
+      <ParentId>4</ParentId>
       <SlotName>IsA</SlotName>
       <SlotId>-1</SlotId>
-      <SlotDefault>NULL</SlotDefault>
+      <SlotDefault>Объект</SlotDefault>
       <SlotType>Frame</SlotType>
       <SlotInheritance>Override</SlotInheritance>
       <IsSystem>true</IsSystem>
-      <frameId>-1</frameId>
+      <frameId>4</frameId>
     </IsA>
     <Error>
       <ParentId>0</ParentId>
@@ -422,7 +422,7 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>238</X>
-    <Y>168</Y>
+    <X>215</X>
+    <Y>198</Y>
   </Frame>
 </ArrayOfFrame>

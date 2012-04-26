@@ -376,7 +376,7 @@
     <value>Добавить фрейм</value>
   </data>
   <data name="DiagramContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 26</value>
+    <value>168, 48</value>
   </data>
   <data name="&gt;&gt;DiagramContextMenu.Name" xml:space="preserve">
     <value>DiagramContextMenu</value>
