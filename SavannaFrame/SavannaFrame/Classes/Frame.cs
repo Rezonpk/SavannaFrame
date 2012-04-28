@@ -14,8 +14,27 @@ namespace SavannaFrame.Classes
     [Serializable]
     public class Frame
     {
+
+        string frameName;
         // имя фрейма
-        public string FrameName { get; set; }
+        public string FrameName { 
+            get
+            {
+                return this.frameName;
+            }
+            set
+            {
+                frameName = value;
+            }
+        }
+
+        public string FrameNameTrimmed
+        {
+            get
+            {
+                return this.frameName.Trim().ToLower();
+            }
+        }
         // id фрейма
         public int FrameId { get; set; }
         // is_a
@@ -97,6 +116,12 @@ namespace SavannaFrame.Classes
                     break;
                 }
             }
+            if (!result)
+            {
+                Frame parentFrame = this.GetParentFrame();
+                if (parentFrame != null)
+                    result = parentFrame.ContainsSlot(slotName);
+            }
             return result;
         }
 
@@ -151,9 +176,6 @@ namespace SavannaFrame.Classes
                 values.Add(slotName, value);
             }            
         }
-
-
-
 
         Frame baseFrame;
         public Frame BaseFrame
@@ -250,7 +272,6 @@ namespace SavannaFrame.Classes
         {
             IsSystem = false;
         }
-
     }
 
 

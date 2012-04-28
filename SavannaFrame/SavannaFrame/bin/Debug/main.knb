@@ -102,6 +102,26 @@
         <IsSystem>false</IsSystem>
         <frameId>5</frameId>
       </Slot>
+	  <Slot>
+	    <ParentId>4</ParentId>
+        <SlotName>isGameObject</SlotName>
+        <SlotId>1</SlotId>
+        <SlotType>Boolean</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>false</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>
+	  </Slot>
+	  <Slot>
+	    <ParentId>4</ParentId>
+        <SlotName>image</SlotName>
+        <SlotId>1</SlotId>
+        <SlotType>String</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>Images\unknown.png</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>	  
+	  </Slot>
     </FrameSlots>
     <FrameName>Объект</FrameName>
     <FrameId>4</FrameId>
@@ -125,11 +145,22 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>395</X>
-    <Y>197</Y>
+    <X>306</X>
+    <Y>42</Y>
   </Frame>
   <Frame>
-    <FrameSlots />
+    <FrameSlots>
+	  <Slot>
+	    <ParentId>5</ParentId>
+        <SlotName>isGameObject</SlotName>
+        <SlotId>0</SlotId>
+        <SlotType>Boolean</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>false</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>
+	  </Slot>
+	</FrameSlots>
     <FrameName>Сосед</FrameName>
     <FrameId>5</FrameId>
     <IsA>
@@ -152,8 +183,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>386</X>
-    <Y>282</Y>
+    <X>358</X>
+    <Y>218</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -422,8 +453,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>266</X>
-    <Y>202</Y>
+    <X>218</X>
+    <Y>118</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -449,8 +480,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>174</X>
-    <Y>306</Y>
+    <X>226</X>
+    <Y>222</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -476,11 +507,32 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>134</X>
-    <Y>218</Y>
+    <X>74</X>
+    <Y>222</Y>
   </Frame>
   <Frame>
-    <FrameSlots />
+    <FrameSlots>
+	  <Slot>
+	    <ParentId>20</ParentId>
+        <SlotName>image</SlotName>
+        <SlotId>0</SlotId>
+        <SlotType>String</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>Images\zebra.jpg</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>	  
+	  </Slot>
+	  <Slot>
+	    <ParentId>20</ParentId>
+        <SlotName>isGameObject</SlotName>
+        <SlotId>1</SlotId>
+        <SlotType>Boolean</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>true</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>
+	  </Slot>
+	</FrameSlots>
     <FrameName>Зебра</FrameName>
     <FrameId>20</FrameId>
     <IsA>
@@ -503,11 +555,32 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>26</X>
-    <Y>298</Y>
+    <X>102</X>
+    <Y>286</Y>
   </Frame>
   <Frame>
-    <FrameSlots />
+    <FrameSlots>
+	  <Slot>
+	    <ParentId>21</ParentId>
+        <SlotName>image</SlotName>
+        <SlotId>0</SlotId>
+        <SlotType>String</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>Images\warthog.jpg</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>	  
+	  </Slot>
+	  <Slot>
+	    <ParentId>21</ParentId>
+        <SlotName>isGameObject</SlotName>
+        <SlotId>1</SlotId>
+        <SlotType>Boolean</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>true</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>
+	  </Slot>
+	</FrameSlots>
     <FrameName>Бородавочник</FrameName>
     <FrameId>21</FrameId>
     <IsA>
@@ -530,11 +603,32 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>10</X>
-    <Y>242</Y>
+    <X>-6</X>
+    <Y>282</Y>
   </Frame>
   <Frame>
-    <FrameSlots />
+    <FrameSlots>
+	  <Slot>
+	    <ParentId>22</ParentId>
+        <SlotName>image</SlotName>
+        <SlotId>0</SlotId>
+        <SlotType>String</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>Images\lion.jpg</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>	  
+	  </Slot>
+	  <Slot>
+	    <ParentId>22</ParentId>
+        <SlotName>isGameObject</SlotName>
+        <SlotId>1</SlotId>
+        <SlotType>Boolean</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>true</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>
+	  </Slot>
+	</FrameSlots>
     <FrameName>Лев</FrameName>
     <FrameId>22</FrameId>
     <IsA>
@@ -557,11 +651,32 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>34</X>
-    <Y>398</Y>
+    <X>322</X>
+    <Y>286</Y>
   </Frame>
   <Frame>
-    <FrameSlots />
+    <FrameSlots>
+	  <Slot>
+	    <ParentId>23</ParentId>
+        <SlotName>image</SlotName>
+        <SlotId>0</SlotId>
+        <SlotType>String</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>Images\gyena.jpg</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>	  
+	  </Slot>
+	  <Slot>
+	    <ParentId>23</ParentId>
+        <SlotName>isGameObject</SlotName>
+        <SlotId>1</SlotId>
+        <SlotType>Boolean</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>true</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>
+	  </Slot>
+	</FrameSlots>
     <FrameName>Гиена</FrameName>
     <FrameId>23</FrameId>
     <IsA>
@@ -584,7 +699,7 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>34</X>
-    <Y>350</Y>
+    <X>210</X>
+    <Y>286</Y>
   </Frame>
 </ArrayOfFrame>

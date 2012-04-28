@@ -486,33 +486,67 @@ namespace SavannaFrame
         /// </summary>
         public void updateObjectsList(object sender, FramesChangedEventArgs args)
         {
-            //пока тут заглушка
-            List<string> allObjects = new List<string>(7);
-            allObjects.Add("grass");
-            allObjects.Add("lion");
-            allObjects.Add("zebra");
-            allObjects.Add("warthog");
-            allObjects.Add("gyena");
-            allObjects.Add("lion2");
-            allObjects.Add("bush");
+            List<Frame> framesObj = new List<Frame>();
 
-            ImageList list = new ImageList();
-            list.ImageSize = new System.Drawing.Size(140, 140);
-            list.Images.Add("grass", Image.FromFile(@"Images\grass.jpg"));
-            list.Images.Add("zebra", Image.FromFile(@"Images\zebra.jpg"));
-            list.Images.Add("gyena", Image.FromFile(@"Images\gyena.jpg"));
-            list.Images.Add("warthog", Image.FromFile(@"Images\warthog.jpg"));
-            list.Images.Add("lion", Image.FromFile(@"Images\lion.jpg"));
-            list.Images.Add("lion2", Image.FromFile(@"Images\lion2.png"));
-            list.Images.Add("bush", Image.FromFile(@"Images\bush.png"));
+            //Далее идет дико неоптимальный код
+
+            foreach (Frame frameObject in KnowLedgeBase.Frames)
+            {
+                if (frameObject.ContainsSlot("isGameObject"))
+                {
+                    if (frameObject.GetSlotDefaultValue("isGameObject").ToString().Trim().ToLower() == "true")
+                        framesObj.Add(frameObject);
+                }
+            }
+            ImageList imageList = new ImageList();
+            imageList.ImageSize = new System.Drawing.Size(140, 140);
+
+            
+            int n = framesObj.Count;
+            for (int i=0; i<n; ++i)
+            {
+                Frame frame = framesObj[i];
+                string imagePath = (string)frame.GetSlotDefaultValue("image");
+                if (imagePath == null)
+                    imagePath = "Images\\unknown.png";
+                Image img = Image.FromFile(imagePath);
+                imageList.Images.Add(frame.FrameNameTrimmed, img);
+            }
+
+            lvObjects.LargeImageList = imageList;
+
+            for (int i = 0; i < n; ++i)
+            {
+                lvObjects.Items.Add(framesObj[i].FrameName, framesObj[i].FrameNameTrimmed);
+            }
+
+            ////пока тут заглушка
+            //List<string> allObjects = new List<string>(7);
+            //allObjects.Add("grass");
+            //allObjects.Add("lion");
+            //allObjects.Add("zebra");
+            //allObjects.Add("warthog");
+            //allObjects.Add("gyena");
+            //allObjects.Add("lion2");
+            //allObjects.Add("bush");
+
+            //ImageList list = new ImageList();
+            //list.ImageSize = new System.Drawing.Size(140, 140);
+            //list.Images.Add("grass", Image.FromFile(@"Images\grass.jpg"));
+            //list.Images.Add("zebra", Image.FromFile(@"Images\zebra.jpg"));
+            //list.Images.Add("gyena", Image.FromFile(@"Images\gyena.jpg"));
+            //list.Images.Add("warthog", Image.FromFile(@"Images\warthog.jpg"));
+            //list.Images.Add("lion", Image.FromFile(@"Images\lion.jpg"));
+            //list.Images.Add("lion2", Image.FromFile(@"Images\lion2.png"));
+            //list.Images.Add("bush", Image.FromFile(@"Images\bush.png"));
             
 
-            lvObjects.LargeImageList=list;
+            //lvObjects.LargeImageList=list;
 
-            foreach (string obj in allObjects)
-            {
-                lvObjects.Items.Add(obj, obj);
-            }
+            //foreach (string obj in allObjects)
+            //{
+            //    lvObjects.Items.Add(obj, obj);
+            //}
         }
 
         private void lvObjects_ItemDrag(object sender, ItemDragEventArgs e)

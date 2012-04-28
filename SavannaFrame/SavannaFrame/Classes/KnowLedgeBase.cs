@@ -35,6 +35,7 @@ namespace SavannaFrame.Classes
     public class KnowLedgeBase
     {
         public static List<Frame> Frames = new List<Frame>();
+
         public static int MaxFrameId = 0;
         public static int MaxSlotId = 0;
 
@@ -82,18 +83,12 @@ namespace SavannaFrame.Classes
                 }
                 MaxFrameId++;
 
-                MessageBox.Show("База знаний успешно загружена!!!!", "Информация");
                 if (this.FramesChangedEvent != null)
                     this.FramesChangedEvent(this, new FramesChangedEventArgs(this.FrameList()));
             }
             catch
             {
                 MessageBox.Show("Невозможно загрузить из файла!!!", "Ошибка");
-            }
-            finally
-            {
-                //if (FStream != null) FStream.Close();
-
             }
         }
 
@@ -177,6 +172,12 @@ namespace SavannaFrame.Classes
         public static Frame getFrameByID(int frameID)
         {
             return Frames.Find(f => f.FrameId == frameID);
+        }
+
+        public static Frame getFrameByName(string frameName)
+        {
+            frameName = frameName.Trim().ToLower();
+            return Frames.Find(f => f.FrameNameTrimmed.Length == frameName.Length && f.FrameNameTrimmed == frameName);
         }
     }
 }

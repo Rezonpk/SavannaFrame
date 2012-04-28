@@ -327,6 +327,9 @@ namespace SavannaFrame
         void GameCell_DragDrop(object sender, DragEventArgs e)
         {
             ListViewItem draggedItem = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
+            Frame draggedFrame = KnowLedgeBase.getFrameByName(draggedItem.Text);
+            this.FrameExample = new FrameExample(draggedFrame);
+
             this.pictureBox.Image = draggedItem.ImageList.Images[draggedItem.ImageKey];
         }
     }
