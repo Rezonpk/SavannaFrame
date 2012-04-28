@@ -275,10 +275,8 @@ namespace SavannaFrame
         /// <param name="x">Индекс ряда ячейки на игровом поле.</param>
         /// <param name="y">Индекс столбца ячейки на игровом поле.</param>
         /// <param name="size">Размер ячейки (в пикселях).</param>
-        public GameCell(GameField gameField, int row, int column, int size, FrameExample frameExample) : base()
+        public GameCell(GameField gameField, int row, int column, int size, FrameExample frameExample = null) : base()
         {
-            if (frameExample == null)
-                throw new NullReferenceException("Фрейм экземпляр для клетки не может быть NULL!");
             this.FrameExample = frameExample;
 
             pictureBox = new PictureBox();
@@ -289,13 +287,19 @@ namespace SavannaFrame
             this.gameField = gameField;
             this.Size = size;
             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            //pictureBox.Image = Image.FromFile("Images\\grass.jpg"); //пусть пока будет так :) Значение по умолчанию - трава.
-            //if (frameExample.ContainsSlot("image"))
 
-            //Фрейм-прототип этого экземпляра должен быть унаследован от фрейма-объекта, который должен содержать слот "image".
-            String imageFile = (string)frameExample.Value("image");
-            //if (imageFile == null)
-            //    imageFile = "Images\\unknown.png";
+            String imageFile;
+            if (frameExample != null)
+            {
+                //Фрейм-прототип этого экземпляра должен быть унаследован от фрейма-объекта, который должен содержать слот "image".
+                imageFile = (string)frameExample.Value("image");
+                if (imageFile == null)
+                    throw new NullReferenceException("slot 'image' not found for frame " + frameExample.FrameName + " with id " + frameExample.FrameId.ToString());
+            }
+            else
+            {
+                imageFile = "Images\\grass.jpg";
+            }
             pictureBox.Image = Image.FromFile(imageFile);
 
             this.Row = row;
@@ -329,6 +333,11 @@ namespace SavannaFrame
             ListViewItem draggedItem = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
             Frame draggedFrame = KnowLedgeBase.getFrameByName(draggedItem.Text);
             this.FrameExample = new FrameExample(draggedFrame);
+            this.FrameExample.SetValue("Row", this.Row);
+            this.FrameExample.SetValue("Column", this.Column);
+
+            KnowLedgeBase.FramesExamples.Remove(KnowLedgeBase.FramesExamples.Find(f => (Int32.Parse(f.Value("Row").ToString()) == this.Row && Int32.Parse(f.Value("Column").ToString()) == this.Column)));
+            KnowLedgeBase.FramesExamples.Add(this.FrameExample);
 
             this.pictureBox.Image = draggedItem.ImageList.Images[draggedItem.ImageKey];
         }

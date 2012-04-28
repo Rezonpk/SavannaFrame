@@ -35,6 +35,7 @@ namespace SavannaFrame.Classes
     public class KnowLedgeBase
     {
         public static List<Frame> Frames = new List<Frame>();
+        public static List<FrameExample> FramesExamples = new List<FrameExample>();
 
         public static int MaxFrameId = 0;
         public static int MaxSlotId = 0;
@@ -179,5 +180,6 @@ namespace SavannaFrame.Classes
             frameName = frameName.Trim().ToLower();
             return Frames.Find(f => f.FrameNameTrimmed.Length == frameName.Length && f.FrameNameTrimmed == frameName);
         }
+
     }
 }

@@ -178,6 +178,7 @@ namespace SavannaFrame.Classes
         }
 
         Frame baseFrame;
+
         public Frame BaseFrame
         {
             private set
@@ -191,8 +192,6 @@ namespace SavannaFrame.Classes
         }
 
         public List<Slot> slots;
-
-
 
         /// <summary>
         /// 

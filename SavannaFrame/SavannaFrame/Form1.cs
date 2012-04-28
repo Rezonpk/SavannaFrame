@@ -553,8 +553,5 @@ namespace SavannaFrame
         {
             this.DoDragDrop(e.Item, DragDropEffects.Copy);
         }
-
-
-
     }
 }
