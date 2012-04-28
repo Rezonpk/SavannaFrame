@@ -125,8 +125,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>384</X>
-    <Y>170</Y>
+    <X>395</X>
+    <Y>197</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -152,8 +152,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>283</X>
-    <Y>269</Y>
+    <X>386</X>
+    <Y>282</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -179,8 +179,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>313</X>
-    <Y>332</Y>
+    <X>422</X>
+    <Y>346</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -206,8 +206,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>52</X>
-    <Y>420</Y>
+    <X>156</X>
+    <Y>440</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -233,8 +233,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>176</X>
-    <Y>423</Y>
+    <X>280</X>
+    <Y>443</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -260,8 +260,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>309</X>
-    <Y>419</Y>
+    <X>413</X>
+    <Y>439</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -287,8 +287,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>435</X>
-    <Y>421</Y>
+    <X>539</X>
+    <Y>441</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -314,8 +314,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>559</X>
-    <Y>421</Y>
+    <X>663</X>
+    <Y>441</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -341,8 +341,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>677</X>
-    <Y>415</Y>
+    <X>781</X>
+    <Y>435</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -368,8 +368,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>806</X>
-    <Y>415</Y>
+    <X>910</X>
+    <Y>435</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -395,8 +395,8 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>933</X>
-    <Y>414</Y>
+    <X>1037</X>
+    <Y>434</Y>
   </Frame>
   <Frame>
     <FrameSlots />
@@ -422,7 +422,169 @@
       <IsSystem>true</IsSystem>
       <frameId>-1</frameId>
     </Error>
-    <X>215</X>
-    <Y>198</Y>
+    <X>266</X>
+    <Y>202</Y>
+  </Frame>
+  <Frame>
+    <FrameSlots />
+    <FrameName>Хищник</FrameName>
+    <FrameId>18</FrameId>
+    <IsA>
+      <ParentId>16</ParentId>
+      <SlotName>IsA</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>Игрок</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>16</frameId>
+    </IsA>
+    <Error>
+      <ParentId>0</ParentId>
+      <SlotName>Error</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>NULL</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>-1</frameId>
+    </Error>
+    <X>174</X>
+    <Y>306</Y>
+  </Frame>
+  <Frame>
+    <FrameSlots />
+    <FrameName>Травоядное</FrameName>
+    <FrameId>19</FrameId>
+    <IsA>
+      <ParentId>16</ParentId>
+      <SlotName>IsA</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>Игрок</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>16</frameId>
+    </IsA>
+    <Error>
+      <ParentId>0</ParentId>
+      <SlotName>Error</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>NULL</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>-1</frameId>
+    </Error>
+    <X>134</X>
+    <Y>218</Y>
+  </Frame>
+  <Frame>
+    <FrameSlots />
+    <FrameName>Зебра</FrameName>
+    <FrameId>20</FrameId>
+    <IsA>
+      <ParentId>19</ParentId>
+      <SlotName>IsA</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>Травоядное</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>19</frameId>
+    </IsA>
+    <Error>
+      <ParentId>0</ParentId>
+      <SlotName>Error</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>NULL</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>-1</frameId>
+    </Error>
+    <X>26</X>
+    <Y>298</Y>
+  </Frame>
+  <Frame>
+    <FrameSlots />
+    <FrameName>Бородавочник</FrameName>
+    <FrameId>21</FrameId>
+    <IsA>
+      <ParentId>19</ParentId>
+      <SlotName>IsA</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>Травоядное</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>19</frameId>
+    </IsA>
+    <Error>
+      <ParentId>0</ParentId>
+      <SlotName>Error</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>NULL</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>-1</frameId>
+    </Error>
+    <X>10</X>
+    <Y>242</Y>
+  </Frame>
+  <Frame>
+    <FrameSlots />
+    <FrameName>Лев</FrameName>
+    <FrameId>22</FrameId>
+    <IsA>
+      <ParentId>18</ParentId>
+      <SlotName>IsA</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>Хищник</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>18</frameId>
+    </IsA>
+    <Error>
+      <ParentId>0</ParentId>
+      <SlotName>Error</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>NULL</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>-1</frameId>
+    </Error>
+    <X>34</X>
+    <Y>398</Y>
+  </Frame>
+  <Frame>
+    <FrameSlots />
+    <FrameName>Гиена</FrameName>
+    <FrameId>23</FrameId>
+    <IsA>
+      <ParentId>18</ParentId>
+      <SlotName>IsA</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>Хищник</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>18</frameId>
+    </IsA>
+    <Error>
+      <ParentId>0</ParentId>
+      <SlotName>Error</SlotName>
+      <SlotId>-1</SlotId>
+      <SlotDefault>NULL</SlotDefault>
+      <SlotType>Frame</SlotType>
+      <SlotInheritance>Override</SlotInheritance>
+      <IsSystem>true</IsSystem>
+      <frameId>-1</frameId>
+    </Error>
+    <X>34</X>
+    <Y>350</Y>
   </Frame>
 </ArrayOfFrame>

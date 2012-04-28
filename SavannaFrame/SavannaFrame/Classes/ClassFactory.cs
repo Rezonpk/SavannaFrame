@@ -19,18 +19,31 @@ namespace SavannaFrame.Classes
             }
         }
 
-        public static string fileName = "";
+        private static string fileName = null;
+        public static string FileName
+        {
+            get
+            {
+                return fileName;
+            }
+            private set
+            {
+                fileName = value;
+            }
+        }
+
         public static bool isSaved = true;
         public static int SelectedObjId = -1;
+
+
 
         public static void SaveKBase()
         {
             //FileStream FStream = new FileStream(fileName, FileMode.Create, FileAccess.Write);
-
             try
             {
                 //делегируем сохранение KnowLedgeBase
-                kBase.Save(fileName);
+                kBase.Save(FileName);
                 isSaved = true;
             }
             catch
@@ -45,17 +58,17 @@ namespace SavannaFrame.Classes
 
         public static void SaveKBase(string filename)
         {
-            fileName = filename;
+            FileName = filename;
             SaveKBase();
         }
 
         public static void LoadKBase(string filename)
         {
-            fileName = filename;
+            FileName = filename;
 
             try
             {
-                kBase.Load(filename);
+                kBase.Load(FileName);
                 isSaved = true;
             }
             catch

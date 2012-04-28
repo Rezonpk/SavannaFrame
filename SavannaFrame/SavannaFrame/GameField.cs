@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using SavannaFrame.Classes;
+
 namespace SavannaFrame
 {
     /// <summary>
@@ -151,7 +153,21 @@ namespace SavannaFrame
                 List<GameCell> row = new List<GameCell>(columnCount);
                 for (int j = 0; j < ColumnCount; ++j)
                 {
-                    GameCell cell = new GameCell(this, i, j, cellSize);
+                    Frame framePrototype = new Frame();
+                    Slot slotImage = new Slot();
+                    slotImage.SlotName = "image";
+                    slotImage.SlotInheritance = SlotInherit.Override;
+                    slotImage.SlotType = SlotType.String;
+                    slotImage.SlotDefault = "Images\\unknown.png";
+
+                    framePrototype.FrameSlots.Add(slotImage);
+                    FrameExample frameExample = new FrameExample(framePrototype);
+                    frameExample.SetValue("image", "Images\\grass.jpg");
+
+                    frameExample.X = i;
+                    frameExample.Y = j;
+
+                    GameCell cell = new GameCell(this, i, j, cellSize, frameExample);
                     row.Add(cell);
                     //cell.Location = new Point(xCoord, yCoord);
                     this.Controls.Add(cell);
@@ -190,21 +206,47 @@ namespace SavannaFrame
     /// </summary>
     public class GameCell : Panel
     {
-        private int x, y;
+        private int column, row;
         private GameField gameField;
         //Раньше наследовали от pictureBox'а просто, но он не поддерживает нормальный drag&drop :(приходится так, с костылями. 
         //Сам контрол - панель, а на нем - pictureBox с нужной картинкой.
-        PictureBox pictureBox; 
- 
-        
+        PictureBox pictureBox;
+
+        FrameExample frameExample;
+
+        public FrameExample FrameExample
+        {
+            get
+            {
+                return this.frameExample;
+            }
+            private set
+            {
+                this.frameExample = value;
+            }
+        }
+
+        public void PerformMLV()
+        {
+
+        }
+
         /// <summary>
         /// Индекс строки ячейки на игровом поле
         /// </summary>
-        public int X { get { return x; } }
+        public int Row { 
+            get { return row; }
+            private set { row = value; }
+        }
+        
         /// <summary>
         /// Индекс столбца ячейки на игровом поле
         /// </summary>
-        public int Y { get { return y; } }
+        public int Column {
+            get { return column; }
+            private set { column = value; }
+        }
+
         /// <summary>
         /// Размер ячейки в пикселях
         /// </summary>
@@ -233,20 +275,31 @@ namespace SavannaFrame
         /// <param name="x">Индекс ряда ячейки на игровом поле.</param>
         /// <param name="y">Индекс столбца ячейки на игровом поле.</param>
         /// <param name="size">Размер ячейки (в пикселях).</param>
-        public GameCell(GameField gameField, int x, int y, int size) : base()
+        public GameCell(GameField gameField, int row, int column, int size, FrameExample frameExample) : base()
         {
+            if (frameExample == null)
+                throw new NullReferenceException("Фрейм экземпляр для клетки не может быть NULL!");
+            this.FrameExample = frameExample;
+
             pictureBox = new PictureBox();
             pictureBox.Dock = DockStyle.Fill;
             this.Controls.Add(pictureBox);
             this.AllowDrop = true;
 
-
             this.gameField = gameField;
             this.Size = size;
             pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox.Image = Image.FromFile("Images\\grass.jpg"); //пусть пока будет так :) Значение по умолчанию - трава.
-            this.x = x;
-            this.y = y;
+            //pictureBox.Image = Image.FromFile("Images\\grass.jpg"); //пусть пока будет так :) Значение по умолчанию - трава.
+            //if (frameExample.ContainsSlot("image"))
+
+            //Фрейм-прототип этого экземпляра должен быть унаследован от фрейма-объекта, который должен содержать слот "image".
+            String imageFile = (string)frameExample.Value("image");
+            //if (imageFile == null)
+            //    imageFile = "Images\\unknown.png";
+            pictureBox.Image = Image.FromFile(imageFile);
+
+            this.Row = row;
+            this.Column = column;
             this.DragEnter += new DragEventHandler(GameCell_DragEnter);
             this.DragDrop += new DragEventHandler(GameCell_DragDrop);
         }

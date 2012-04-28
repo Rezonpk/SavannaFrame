@@ -36,6 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
+            this.DoubleBuffered = true;
             this.Name = "GameField";
             this.Size = new System.Drawing.Size(536, 459);
             this.ResumeLayout(false);

@@ -196,7 +196,7 @@
             // 
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
             resources.ApplyResources(this.сохранитьКакToolStripMenuItem, "сохранитьКакToolStripMenuItem");
-            this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
+            this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -582,6 +582,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.topPanelMainMenu);
+            this.DoubleBuffered = true;
             this.MainMenuStrip = this.MainMenu;
             this.Name = "MainForm";
             this.splitGameField.Panel2.ResumeLayout(false);

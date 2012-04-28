@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using MS.Internal.Xml.XPath;
+using System.Collections;
 
 namespace SavannaFrame.Classes
 {
@@ -22,10 +23,82 @@ namespace SavannaFrame.Classes
         // error
         public Slot Error { get; set; }
         // список слотов фрейма
+
+        public Frame GetParentFrame()
+        {
+            return KnowLedgeBase.getFrameByID(this.IsA.frameId);
+        }
+
         public List<Slot> FrameSlots;
 
+        //public List<Slot> AllSlots()
+        //{
+        //    List<Slot> result = new List<Slot>();
+        //    Frame parent = KnowLedgeBase.getFrameByID(this.IsA.frameId);
+        //    if (parent != null)
+        //        result.AddRange(parent.AllSlots());
+        //    foreach (Slot slot in this.FrameSlots)
+        //    {
+        //        switch (slot.SlotInheritance)
+        //        {
+        //            case SlotInherit.Same:
+        //                if (
+        //                break;
+        //        }
+        //    }
+
+        //    return result;
+        //}
+
+        private object GetSlotDefaultValuePrivate(string slotNameTrimmed)
+        {
+            // Frames.Find(f => f.FrameId == frameID);
+            object result=null;
+            Slot slot = FrameSlots.Find(s => (s.SlotNameTrimmed.Length == slotNameTrimmed.Length && s.SlotNameTrimmed == slotNameTrimmed));
+            if (slot != null)
+                return slot.SlotDefault;
+            else
+            {
+                Frame parentFrame = this.GetParentFrame();
+                if (parentFrame !=null)
+                    result = parentFrame.GetSlotDefaultValuePrivate(slotNameTrimmed);
+            }
+            return result;
+        }
+
+        public object GetSlotDefaultValue(string slotName)
+        {
+            return this.GetSlotDefaultValuePrivate(slotName.Trim().ToLower());
+        }
+
+        /// <summary>
+        /// Координата X фрейма НА ДИАГРАММЕ
+        /// </summary>
         public float X { get; set; }
+        /// <summary>
+        /// Координата Y фрейма НА ДИАГРАММЕ
+        /// </summary>
         public float Y { get; set; }
+
+        /// <summary>
+        /// Проверяет, содаржит ли данный фрейм слот с заданным именем. Для имени выполняется toLower()+trim().
+        /// </summary>
+        /// <param name="slotName"></param>
+        /// <returns></returns>
+        public bool ContainsSlot(String slotName)
+        {
+            bool result = false;
+            slotName = slotName.Trim().ToLower();
+            foreach (Slot slot in this.FrameSlots)
+            {
+                if (slot.SlotNameTrimmed.Length == slotName.Length && slot.SlotNameTrimmed == slotName)
+                {
+                    result = true;
+                    break;
+                }
+            }
+            return result;
+        }
 
         public Frame()
         {
@@ -49,6 +122,68 @@ namespace SavannaFrame.Classes
         }
     }
 
+    public class FrameExample : Frame
+    {
+        /// <summary>
+        /// Значения слотов <имя слота, значение>.
+        /// </summary>
+        Dictionary<String, object> values = new Dictionary<string,object>();
+        
+        public object Value(String slotName)
+        {
+            object value = null;
+            if (BaseFrame.ContainsSlot(slotName))
+            {
+                slotName = slotName.Trim().ToLower();
+                if (values.ContainsKey(slotName))
+                    value = values[slotName];
+                else
+                    value = BaseFrame.GetSlotDefaultValue(slotName);
+            }
+            return value;
+        }
+
+        public void SetValue(String slotName, object value)
+        {
+            if (BaseFrame.ContainsSlot(slotName))
+            {
+                slotName = slotName.Trim().ToLower();
+                values.Add(slotName, value);
+            }            
+        }
+
+
+
+
+        Frame baseFrame;
+        public Frame BaseFrame
+        {
+            private set
+            {
+                this.baseFrame = value;
+            }
+            get 
+            {
+                return this.baseFrame;
+            }
+        }
+
+        public List<Slot> slots;
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="BaseFrame">ссылка на фрейм-прототип. НЕ может быть null</param>
+        public FrameExample(Frame inputBaseFrame)
+        {
+            if (inputBaseFrame == null)
+                throw new NullReferenceException("Фрейм-прототип не может иметь значение NULL");
+            this.BaseFrame = inputBaseFrame;
+        }
+    }
+
     /// <summary>
     /// Класс слота фрейма
     /// </summary>
@@ -59,8 +194,31 @@ namespace SavannaFrame.Classes
         //public Frame Parent { get; set; }
         public int ParentId { get; set; }
 
-        // имя слота
-        public string SlotName { get; set; }
+        string slotName;
+        // Получает или задает имя слота
+        public string SlotName
+        {
+            get
+            {
+                return this.slotName;
+            }
+            set
+            {
+                this.slotName = value;
+            }
+        }
+
+        /// <summary>
+        /// Получает имя слота + toLower() + trim()
+        /// </summary>
+        public string SlotNameTrimmed
+        {
+            get
+            {
+                return this.slotName.Trim().ToLower();
+            }
+        }
+
         // id слота
         public int SlotId { get; set; }
         // задание отсутствия

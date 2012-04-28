@@ -8,5 +8,10 @@ namespace SavannaFrame.Classes
     class MLV
     {
         // Тут типа описание логического вывода для продукций тут вывод непосредственно
+
+        public void doMLVForPoint(GameCell gameCell)
+        {
+            
+        }
     }
 }

@@ -174,6 +174,9 @@ namespace SavannaFrame.Classes
             return listSlot;
         }
 
-
+        public static Frame getFrameByID(int frameID)
+        {
+            return Frames.Find(f => f.FrameId == frameID);
+        }
     }
 }

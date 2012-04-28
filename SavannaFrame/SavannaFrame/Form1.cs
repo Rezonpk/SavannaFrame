@@ -16,7 +16,7 @@ namespace SavannaFrame
     {
         public Point StartLinkPoint, EndLinkPoint;
         private GameField gameField;
-  
+
         public MainForm()
         {
             InitializeComponent();
@@ -54,7 +54,11 @@ namespace SavannaFrame
 
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrameDiagram_LinkCreated(object sender, LinkEventArgs e)
         {
             Frame frameUpper; //тот фрейм, к которому идет дуга
@@ -232,7 +236,29 @@ namespace SavannaFrame
             MessageBox.Show("Когнитивная Игра - Саванна", "О программе");
         }
 
+        private void updateFramesCoordinates()
+        {
+            foreach (ShapeNode node in FrameDiagram.Nodes)
+            {
+                int id = (int)node.Id;
+                Frame frame = KnowLedgeBase.getFrameByID(id);
+                frame.X = node.GetBounds().X;
+                frame.Y = node.GetBounds().Y;
+            }
+        }
+
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ClassFactory.FileName != null)
+            {
+                updateFramesCoordinates();
+                ClassFactory.SaveKBase();
+            }
+            else
+                сохранитьКакToolStripMenuItem_Click(sender, e);
+        }
+
+        private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog svf = new SaveFileDialog();
             svf.Filter = "(KnowLedgeBase Files *.knb)|*.knb";
@@ -240,6 +266,7 @@ namespace SavannaFrame
             svf.InitialDirectory = Assembly.GetExecutingAssembly().Location;
             if (svf.ShowDialog() == DialogResult.OK)
             {
+                updateFramesCoordinates();
                 ClassFactory.SaveKBase(svf.FileName);
             }
         }
@@ -492,6 +519,8 @@ namespace SavannaFrame
         {
             this.DoDragDrop(e.Item, DragDropEffects.Copy);
         }
+
+
 
     }
 }
