@@ -154,18 +154,37 @@ namespace SavannaFrame
                 for (int j = 0; j < ColumnCount; ++j)
                 {
                     Frame framePrototype = new Frame();
+                    framePrototype.FrameId = -1;
                     Slot slotImage = new Slot();
                     slotImage.SlotName = "image";
                     slotImage.SlotInheritance = SlotInherit.Override;
                     slotImage.SlotType = SlotType.String;
                     slotImage.SlotDefault = "Images\\unknown.png";
+                    slotImage.SlotId = 0;
+                    slotImage.ParentId = framePrototype.FrameId;
+
+                    Slot slotRow = new Slot();
+                    slotRow.SlotName = "Row";
+                    slotRow.SlotType = SlotType.Integer;
+                    slotRow.SlotInheritance = SlotInherit.Override;
+                    slotRow.SlotId = 1;
+                    slotRow.ParentId = framePrototype.FrameId;
+
+                    Slot slotColumn = new Slot();
+                    slotColumn.SlotName = "Column";
+                    slotColumn.SlotType = SlotType.Integer;
+                    slotColumn.SlotInheritance = SlotInherit.Override;
+                    slotColumn.SlotId = 1;
+                    slotColumn.ParentId = framePrototype.FrameId;
 
                     framePrototype.FrameSlots.Add(slotImage);
+                    framePrototype.FrameSlots.Add(slotRow);
+                    framePrototype.FrameSlots.Add(slotColumn);
                     FrameExample frameExample = new FrameExample(framePrototype);
                     frameExample.SetValue("image", "Images\\grass.jpg");
 
-                    frameExample.X = i;
-                    frameExample.Y = j;
+                    frameExample.SetValue("Row", i);
+                    frameExample.SetValue("Column", j);
 
                     GameCell cell = new GameCell(this, i, j, cellSize, frameExample);
                     row.Add(cell);
@@ -294,7 +313,7 @@ namespace SavannaFrame
                 //Фрейм-прототип этого экземпляра должен быть унаследован от фрейма-объекта, который должен содержать слот "image".
                 imageFile = (string)frameExample.Value("image");
                 if (imageFile == null)
-                    throw new NullReferenceException("slot 'image' not found for frame " + frameExample.FrameName + " with id " + frameExample.FrameId.ToString());
+                    throw new NullReferenceException("slot 'image' not found for frame " + frameExample.BaseFrame.FrameName + " with id " + frameExample.BaseFrame.FrameId.ToString());
             }
             else
             {

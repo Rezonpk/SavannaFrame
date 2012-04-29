@@ -11,7 +11,9 @@ namespace SavannaFrame.Classes
 
         public void doMLVForPoint(GameCell gameCell)
         {
-            
+            FrameExample situationExample = new FrameExample();
+            situationExample.SetValue("agent", gameCell.FrameExample);
+
         }
     }
 }

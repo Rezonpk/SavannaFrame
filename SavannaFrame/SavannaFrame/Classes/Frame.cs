@@ -147,34 +147,90 @@ namespace SavannaFrame.Classes
         }
     }
 
-    public class FrameExample : Frame
+    public class FrameExample
     {
         /// <summary>
         /// Значения слотов <имя слота, значение>.
         /// </summary>
         Dictionary<String, object> values = new Dictionary<string,object>();
+
+        private bool containsSlotPrivate(string slotNameTrimmed)
+        {
+            bool result = false;
+            foreach (Slot slotOwn in this.slots)
+                if (slotOwn.SlotNameTrimmed.Length == slotNameTrimmed.Length && slotOwn.SlotNameTrimmed == slotNameTrimmed)
+                {
+                    result = true;
+                    break;
+                }
+            if (!result && BaseFrame != null)
+                result = BaseFrame.ContainsSlot(slotNameTrimmed);
+            return result;
+        }
+
+        public bool ContainsSlot(string slotName)
+        {
+            slotName = slotName.Trim().ToLower();
+            return this.containsSlotPrivate(slotName);
+        }
         
+
         public object Value(String slotName)
         {
             object value = null;
-            if (BaseFrame.ContainsSlot(slotName))
-            {
-                slotName = slotName.Trim().ToLower();
-                if (values.ContainsKey(slotName))
-                    value = values[slotName];
-                else
-                    value = BaseFrame.GetSlotDefaultValue(slotName);
-            }
+            slotName = slotName.Trim().ToLower();
+            //if (this.BaseFrame != null)
+            //{
+            //    if (BaseFrame.ContainsSlot(slotName))
+            //    {
+            //        slotName = slotName.Trim().ToLower();
+            //        if (values.ContainsKey(slotName))
+            //            value = values[slotName];
+            //        else
+            //            value = BaseFrame.GetSlotDefaultValue(slotName);
+            //    }
+            //    else
+            //        throw new KeyNotFoundException("Родительский фрейм " + BaseFrame.FrameName + " не содержит слота с именем " + slotName);
+            //}
+            //else
+            //    if (values.ContainsKey(slotName))
+            //        value = values[slotName];
+            if (this.containsSlotPrivate(slotName))
+                value = values[slotName];
+            else
+                throw new KeyNotFoundException("Слот "+slotName+" не найден как во фрейме-экземпляре, так и в родительском фрейме.");
             return value;
         }
 
         public void SetValue(String slotName, object value)
         {
-            if (BaseFrame.ContainsSlot(slotName))
+            slotName = slotName.Trim().ToLower();
+            //if (BaseFrame != null)
+            //{
+            //    if (BaseFrame.ContainsSlot(slotName))
+            //        values.Add(slotName, value);
+            //    else
+            //        throw new KeyNotFoundException("Родительский фрейм " + BaseFrame.FrameName + " не содержит слота с именем " + slotName);
+            //}
+            //else
+            //    values.Add(slotName, value);
+            
+            //if (values.ContainsKey(slotName) || (BaseFrame != null && BaseFrame.ContainsSlot(slotName)))
+            if (this.containsSlotPrivate(slotName))
             {
-                slotName = slotName.Trim().ToLower();
-                values.Add(slotName, value);
-            }            
+                if (values.ContainsKey(slotName))
+                    values[slotName] = value;
+                else
+                    values.Add(slotName, value);
+            }
+        }
+
+        public void AddSlot(Slot slot)
+        {
+            if (!this.ContainsSlot(slot.SlotName))
+                this.slots.Add(slot);
+            else
+                throw new ArgumentException("Слот с таким именем ("+slot.SlotName+") уже существует");
         }
 
         Frame baseFrame;
@@ -191,16 +247,19 @@ namespace SavannaFrame.Classes
             }
         }
 
-        public List<Slot> slots;
+        private List<Slot> slots = new List<Slot>();
+        public List<Slot> Slots
+        {
+            get { return this.slots; }
+            set { slots = value; }
+        }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="BaseFrame">ссылка на фрейм-прототип. НЕ может быть null</param>
-        public FrameExample(Frame inputBaseFrame)
+        public FrameExample(Frame inputBaseFrame=null)
         {
-            if (inputBaseFrame == null)
-                throw new NullReferenceException("Фрейм-прототип не может иметь значение NULL");
             this.BaseFrame = inputBaseFrame;
         }
     }
