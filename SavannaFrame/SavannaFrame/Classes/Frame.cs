@@ -14,6 +14,19 @@ namespace SavannaFrame.Classes
     [Serializable]
     public class Frame
     {
+        public int SlotMaxID
+        {
+            get
+            {
+                int maxID = 0;
+                foreach (Slot slot in this.FrameSlots)
+                {
+                    if (slot.SlotId > maxID)
+                        maxID = slot.SlotId;
+                }
+                return maxID;
+            }
+        }
 
         string frameName;
         // имя фрейма
@@ -50,25 +63,6 @@ namespace SavannaFrame.Classes
 
         public List<Slot> FrameSlots;
 
-        //public List<Slot> AllSlots()
-        //{
-        //    List<Slot> result = new List<Slot>();
-        //    Frame parent = KnowLedgeBase.getFrameByID(this.IsA.frameId);
-        //    if (parent != null)
-        //        result.AddRange(parent.AllSlots());
-        //    foreach (Slot slot in this.FrameSlots)
-        //    {
-        //        switch (slot.SlotInheritance)
-        //        {
-        //            case SlotInherit.Same:
-        //                if (
-        //                break;
-        //        }
-        //    }
-
-        //    return result;
-        //}
-
         private object GetSlotDefaultValuePrivate(string slotNameTrimmed)
         {
             // Frames.Find(f => f.FrameId == frameID);
@@ -88,6 +82,20 @@ namespace SavannaFrame.Classes
         public object GetSlotDefaultValue(string slotName)
         {
             return this.GetSlotDefaultValuePrivate(slotName.Trim().ToLower());
+        }
+
+        public Slot GetSlotByName(string slotName)
+        {
+            slotName = slotName.Trim().ToLower();
+            Slot result = null;
+            result = FrameSlots.Find(sl => (sl.SlotNameTrimmed.Length == slotName.Length && sl.SlotNameTrimmed == slotName));
+            if (result == null)
+            {
+                Frame parent = this.GetParentFrame();
+                if (parent != null)
+                    result = parent.GetSlotByName(slotName);
+            }
+            return result;
         }
 
         /// <summary>
@@ -133,6 +141,23 @@ namespace SavannaFrame.Classes
             IsA = new Slot{SlotId = -1, IsSystem = true, SlotName = "IsA", SlotDefault = "NULL", SlotType = SlotType.Frame};
             Error = new Slot { SlotId = -1, IsSystem = true, SlotName = "Error", SlotDefault = "NULL", SlotType = SlotType.Frame };
         }
+
+        public bool CheckIsA(Frame frameParentToCheck)
+        {
+            bool result = false;
+            if (frameParentToCheck != null)
+            {
+                if (frameParentToCheck.FrameId == this.FrameId)
+                    result = true;
+                else
+                {
+                    Frame frameParent = this.GetParentFrame();
+                    if (frameParent != null)
+                        result = frameParent.CheckIsA(frameParentToCheck);
+                }
+            }
+            return result;
+        }
     }
 
     [Serializable]
@@ -168,10 +193,27 @@ namespace SavannaFrame.Classes
             return result;
         }
 
+        public bool CheckIsA(Frame frameParentToCheck)
+        {
+            bool result = false;
+            if (this.BaseFrame != null)
+                result = BaseFrame.CheckIsA(frameParentToCheck);
+            return result;
+        }
+
         public bool ContainsSlot(string slotName)
         {
             slotName = slotName.Trim().ToLower();
             return this.containsSlotPrivate(slotName);
+        }
+
+        public Slot GetSlotByName(string slotName)
+        {
+            slotName = slotName.Trim().ToLower();
+            Slot slot = this.Slots.Find(sl => sl.SlotNameTrimmed.Length == slotName.Length && sl.SlotNameTrimmed == slotName);
+            if (slot == null && this.BaseFrame != null)
+                slot = this.BaseFrame.GetSlotByName(slotName);
+            return slot;
         }
         
 
@@ -179,24 +221,13 @@ namespace SavannaFrame.Classes
         {
             object value = null;
             slotName = slotName.Trim().ToLower();
-            //if (this.BaseFrame != null)
-            //{
-            //    if (BaseFrame.ContainsSlot(slotName))
-            //    {
-            //        slotName = slotName.Trim().ToLower();
-            //        if (values.ContainsKey(slotName))
-            //            value = values[slotName];
-            //        else
-            //            value = BaseFrame.GetSlotDefaultValue(slotName);
-            //    }
-            //    else
-            //        throw new KeyNotFoundException("Родительский фрейм " + BaseFrame.FrameName + " не содержит слота с именем " + slotName);
-            //}
-            //else
-            //    if (values.ContainsKey(slotName))
-            //        value = values[slotName];
             if (this.containsSlotPrivate(slotName))
-                value = values[slotName];
+            {
+                //if (values.ContainsKey(slotName))
+                    value = values[slotName];
+                //else
+                //    value = this.GetSlotByName(slotName).SlotDefault;
+            }
             else
                 throw new KeyNotFoundException("Слот "+slotName+" не найден как во фрейме-экземпляре, так и в родительском фрейме.");
             return value;
@@ -205,17 +236,6 @@ namespace SavannaFrame.Classes
         public void SetValue(String slotName, object value)
         {
             slotName = slotName.Trim().ToLower();
-            //if (BaseFrame != null)
-            //{
-            //    if (BaseFrame.ContainsSlot(slotName))
-            //        values.Add(slotName, value);
-            //    else
-            //        throw new KeyNotFoundException("Родительский фрейм " + BaseFrame.FrameName + " не содержит слота с именем " + slotName);
-            //}
-            //else
-            //    values.Add(slotName, value);
-            
-            //if (values.ContainsKey(slotName) || (BaseFrame != null && BaseFrame.ContainsSlot(slotName)))
             if (this.containsSlotPrivate(slotName))
             {
                 if (values.ContainsKey(slotName))
@@ -227,6 +247,7 @@ namespace SavannaFrame.Classes
 
         public void AddSlot(Slot slot)
         {
+            slot.SlotId = this.getNextSlotID();
             if (!this.ContainsSlot(slot.SlotName))
                 this.slots.Add(slot);
             else
@@ -261,6 +282,17 @@ namespace SavannaFrame.Classes
         public FrameExample(Frame inputBaseFrame=null)
         {
             this.BaseFrame = inputBaseFrame;
+        }
+
+        public int getNextSlotID()
+        {
+            int result = 0;
+            if (BaseFrame != null)
+                result = BaseFrame.SlotMaxID;
+            foreach (Slot slot in this.Slots)
+                if (slot.SlotId > result)
+                    result = slot.SlotId;
+            return result;
         }
     }
 
@@ -326,12 +358,21 @@ namespace SavannaFrame.Classes
             }
         }
 
+        
+        /// <summary>
+        /// маркер слота
+        /// </summary>
+        public String SlotMarker
+        {
+            get;
+            set;
+        }
+
         public Slot()
         {
             IsSystem = false;
         }
     }
-
 
     public enum SlotType
     {
@@ -340,7 +381,8 @@ namespace SavannaFrame.Classes
         String = 2,
         Frame = 3,
         Production = 5,
-        Procedure = 6
+        Procedure = 6,
+        FramePrototype = 7
     }
 
     public enum SlotInherit

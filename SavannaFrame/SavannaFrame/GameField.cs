@@ -134,6 +134,8 @@ namespace SavannaFrame
             this.ResumeLayout();
         }
 
+        public event GameCellClickedEventHandler GameCellClickedEvent;
+
         /// <summary>
         /// Задает размер поля (в ячейках) по вертикали и горизонтали. !ВАЖНО: игровое поле создается заново! Все данные о ячейках стираются!
         /// </summary>
@@ -187,6 +189,7 @@ namespace SavannaFrame
                     frameExample.SetValue("Column", j);
 
                     GameCell cell = new GameCell(this, i, j, cellSize, frameExample);
+                    cell.GameCellClicked += new GameCellClickedEventHandler(cell_GameCellClicked);
                     row.Add(cell);
                     //cell.Location = new Point(xCoord, yCoord);
                     this.Controls.Add(cell);
@@ -200,6 +203,11 @@ namespace SavannaFrame
             this.columnCount = columnCount;
             this.ResumeLayout();
             this.layoutCells();
+        }
+
+        void cell_GameCellClicked(object sender, GameCellClickedEventArgs args)
+        {
+            this.GameCellClickedEvent(this, args);
         }
 
         public GameField()
@@ -220,6 +228,21 @@ namespace SavannaFrame
         }
     }
 
+    public class GameCellClickedEventArgs
+    {
+        public GameCell GameCell
+        {
+            get;
+            private set;
+        }
+        public GameCellClickedEventArgs(GameCell gameCell)
+        {
+            this.GameCell = gameCell;
+        }
+    }
+
+    public delegate void GameCellClickedEventHandler(object sender, GameCellClickedEventArgs args);
+
     /// <summary>
     /// Класс, отвечающий за отображение одной ячейки игрового поля.
     /// </summary>
@@ -232,6 +255,8 @@ namespace SavannaFrame
         PictureBox pictureBox;
 
         FrameExample frameExample;
+
+        public event GameCellClickedEventHandler GameCellClicked;
 
         public FrameExample FrameExample
         {
@@ -325,6 +350,12 @@ namespace SavannaFrame
             this.Column = column;
             this.DragEnter += new DragEventHandler(GameCell_DragEnter);
             this.DragDrop += new DragEventHandler(GameCell_DragDrop);
+            pictureBox.Click += new EventHandler(pictureBox_Click);
+        }
+
+        void pictureBox_Click(object sender, EventArgs e)
+        {
+            this.GameCellClicked(this, new GameCellClickedEventArgs(this));
         }
 
         /// <summary>

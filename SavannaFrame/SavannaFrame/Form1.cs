@@ -23,6 +23,8 @@ namespace SavannaFrame
 
             splitGameField.Panel1.SuspendLayout();
             gameField = new GameField(10, 10);
+            gameField.GameCellClickedEvent += new GameCellClickedEventHandler(gameField_GameCellClickedEvent);
+
             gameField.Dock = DockStyle.Fill;
             splitGameField.Panel1.Controls.Add(gameField);
             splitGameField.Panel1.ResumeLayout();
@@ -33,6 +35,15 @@ namespace SavannaFrame
             EndLinkPoint = new Point();
 
             ClassFactory.kBase.FramesChangedEvent+=new FramesChagedEventHandler(this.updateObjectsList);
+        }
+
+        void gameField_GameCellClickedEvent(object sender, GameCellClickedEventArgs args)
+        {
+            MLV mlv = new MLV();
+            object result = mlv.doMLVForPoint(args.GameCell);
+            if (result == null)
+                result = "null";
+            rtbLOR.Text = result.ToString() + "\n" + rtbLOR.Text;
         }
 
         private void FraimDiagram_NodeCreated(object sender, MindFusion.Diagramming.NodeEventArgs e)
@@ -51,8 +62,6 @@ namespace SavannaFrame
                     FrameTreeView.Nodes.Add(frameitem);
                 }
             }
-
-
         }
         /// <summary>
         /// 

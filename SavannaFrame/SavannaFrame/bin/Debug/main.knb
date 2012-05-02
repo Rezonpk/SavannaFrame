@@ -1,7 +1,27 @@
 <?xml version="1.0"?>
 <ArrayOfFrame xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Frame>
-    <FrameSlots />
+    <FrameSlots>
+      <Slot>
+        <ParentId>0</ParentId>
+        <SlotName>action</SlotName>
+        <SlotId>0</SlotId>
+        <SlotType>String</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>Ситуация: Топтаться на месте.</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>
+      </Slot>
+      <Slot>
+        <ParentId>0</ParentId>
+        <SlotName>agent</SlotName>
+        <SlotId>1</SlotId>
+        <SlotType>Frame</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+        <IsSystem>false</IsSystem>
+        <frameId>16</frameId>
+      </Slot>
+	</FrameSlots>
     <FrameName>Ситуация</FrameName>
     <FrameId>0</FrameId>
     <IsA>
@@ -38,6 +58,26 @@
         <IsSystem>false</IsSystem>
         <frameId>4</frameId>
       </Slot>
+      <Slot>
+        <ParentId>1</ParentId>
+        <SlotName>action</SlotName>
+        <SlotId>1</SlotId>
+        <SlotType>String</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>Ситуация вокруг объекта: Топтаться на месте.</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>
+      </Slot>
+      <Slot>
+        <ParentId>1</ParentId>
+        <SlotName>Сосед</SlotName>
+        <SlotId>2</SlotId>
+        <SlotType>Frame</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotMarker>[agent].[row]==[Сосед].[row]+1 #and [agent].[column]==[Сосед].[Column]</SlotMarker>
+        <IsSystem>false</IsSystem>
+        <frameId>4</frameId>
+      </Slot>
     </FrameSlots>
     <FrameName>Ситуация вокруг объекта</FrameName>
     <FrameId>1</FrameId>
@@ -65,7 +105,28 @@
     <Y>102</Y>
   </Frame>
   <Frame>
-    <FrameSlots />
+    <FrameSlots>
+      <Slot>
+        <ParentId>3</ParentId>
+        <SlotName>action</SlotName>
+        <SlotId>0</SlotId>
+        <SlotType>String</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotDefault>Есть еда: съесть еду.</SlotDefault>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>
+      </Slot>
+      <Slot>
+        <ParentId>3</ParentId>
+        <SlotName>Сосед</SlotName>
+        <SlotId>2</SlotId>
+        <SlotType>Frame</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+		<SlotMarker>[agent].[row]==[Сосед].[row]+1 #and [agent].[column]==[Сосед].[Column] #and [Сосед] #isa [agent].[Еда] #or [agent].[row]==[Сосед].[row]-1 #and [agent].[column]==[Сосед].[Column] #and [Сосед] #isa [agent].[Еда] #or [agent].[row]==[Сосед].[row] #and [agent].[column]+1==[Сосед].[Column] #and [Сосед] #isa [agent].[Еда] #or [agent].[row]==[Сосед].[row] #and [agent].[column]-1==[Сосед].[Column] #and [Сосед] #isa [agent].[Еда] #or [agent].[row]==[Сосед].[row]-1 #and [agent].[column]-1==[Сосед].[Column] #and [Сосед] #isa [agent].[Еда] #or [agent].[row]==[Сосед].[row]-1 #and [agent].[column]+1==[Сосед].[Column] #and [Сосед] #isa [agent].[Еда] #or [agent].[row]==[Сосед].[row]+1 #and [agent].[column]-1==[Сосед].[Column] #and [Сосед] #isa [agent].[Еда] #or [agent].[row]==[Сосед].[row]+1 #and [agent].[column]+1==[Сосед].[Column] #and [Сосед] #isa [agent].[Еда]</SlotMarker>
+        <IsSystem>false</IsSystem>
+        <frameId>4</frameId>
+      </Slot>
+	</FrameSlots>
     <FrameName>Есть еда</FrameName>
     <FrameId>3</FrameId>
     <IsA>
@@ -448,7 +509,17 @@
     <Y>510</Y>
   </Frame>
   <Frame>
-    <FrameSlots />
+    <FrameSlots>
+      <Slot>
+        <ParentId>16</ParentId>
+        <SlotName>Еда</SlotName>
+        <SlotId>0</SlotId>
+        <SlotType>FramePrototype</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+        <IsSystem>false</IsSystem>
+        <frameId>-1</frameId>
+      </Slot>
+	</FrameSlots>
     <FrameName>Игрок</FrameName>
     <FrameId>16</FrameId>
     <IsA>
@@ -475,7 +546,17 @@
     <Y>194</Y>
   </Frame>
   <Frame>
-    <FrameSlots />
+    <FrameSlots>
+      <Slot>
+        <ParentId>20</ParentId>
+        <SlotName>Еда</SlotName>
+        <SlotId>0</SlotId>
+        <SlotType>FramePrototype</SlotType>
+        <SlotInheritance>Override</SlotInheritance>
+        <IsSystem>false</IsSystem>
+        <frameId>19</frameId>
+      </Slot>
+	</FrameSlots>
     <FrameName>Хищник</FrameName>
     <FrameId>18</FrameId>
     <IsA>
