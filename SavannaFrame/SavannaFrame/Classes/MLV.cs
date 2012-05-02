@@ -5,9 +5,26 @@ using System.Text;
 
 namespace SavannaFrame.Classes
 {
+    public class LogEventArgs
+    {
+        public string Text
+        {
+            get;
+            private set;
+        }
+        public LogEventArgs(string Text)
+        {
+            this.Text = Text;
+        }
+    }
+
+    public delegate void LogEventHandler(object sender, LogEventArgs args);
+
     class MLV
     {
         // Тут типа описание логического вывода для продукций тут вывод непосредственно
+
+        public event LogEventHandler LogEvent;
 
         private List<int> checkedFramesIDs = new List<int>();
         FrameExample situationExample = null;
@@ -66,11 +83,13 @@ namespace SavannaFrame.Classes
             //Пока просто берет первый попавшийся непроверенный фрейм. Переделать.
             Frame result = null;
             foreach (Frame frame in situations)
+            {
                 if (!checkedFramesIDs.Contains(frame.FrameId))
                 {
                     result = frame;
                     break;
                 }
+            }
             return result;
         }
 
@@ -353,54 +372,97 @@ namespace SavannaFrame.Classes
             return result;
         }
 
+        private void log(string message="", int offset = 0 )
+        {
+            string offsetStr = "";
+            while (offset-->0)
+                offsetStr += "    ";
+            this.LogEvent(this, new LogEventArgs(offsetStr+message));
+        }
+
         /// <summary>
         /// Попробовать привязаться к конкретной ситуации
         /// </summary>
         /// <param name="situationPrototype">Ситуация, к которой мы хотим привязаться (которую мы проверяем)</param>
         /// <param name="situationExample">Текущий фрейм-экземпляр</param>
         /// <returns>true - если привязалась. false - в противном случае.</returns>
-        private bool checkSituation(Frame situationPrototype, FrameExample situationExample)
+        private bool checkSituation(Frame situationPrototype, FrameExample situationExample, int recursionLevel=0)
         {
+            log("Проверяем ситуацию: " + situationPrototype.FrameName, recursionLevel);
             bool result = true;
-            List<Slot> boundedSlots = new List<Slot>(); //привязавшиеся слоты
-            Dictionary<string, object> slotValues=new Dictionary<string, object>(); //значения привязавшихся слотов
-
-            foreach (Slot slot in situationPrototype.FrameSlots)
+            if (passedSituationsIds.Contains(situationPrototype.FrameId))
+                result = true;
+            else
             {
-                if (slot.SlotMarker != null)
+                if (failedSituationsIds.Contains(situationPrototype.FrameId))
+                    result = false;
+                else
                 {
-                    object slotValue;
 
-//                    if (situationExample.ContainsSlot(slot.SlotName))
-//                        slotValue = situationExample.Value(slot.SlotName);
-//                    else
-                    if (!situationExample.ContainsSlot(slot.SlotName))
+                    checkedFramesIDs.Add(situationPrototype.FrameId);
+                    List<Slot> boundedSlots = new List<Slot>(); //привязавшиеся слоты
+                    Dictionary<string, object> slotValues = new Dictionary<string, object>(); //значения привязавшихся слотов
+
+                    foreach (Slot slot in situationPrototype.FrameSlots)
                     {
-                        slotValue = boundSlot(slot, situationPrototype, situationExample);
+                        if (slot.SlotMarker != null && !situationExample.ContainsSlot(slot.SlotName))
+                        {
+                            object slotValue;
 
-                        if (slotValue == null)
-                        {
-                            result = false;
-                            break;
-                        }
-                        else
-                        {
-                            boundedSlots.Add(slot);
-                            slotValues.Add(slot.SlotNameTrimmed, slotValue);
+                            //                    if (situationExample.ContainsSlot(slot.SlotName))
+                            //                        slotValue = situationExample.Value(slot.SlotName);
+                            //                    else
+                            if (!situationExample.ContainsSlot(slot.SlotName))
+                            {
+                                slotValue = boundSlot(slot, situationPrototype, situationExample);
+
+                                if (slotValue == null)
+                                {
+                                    result = false;
+                                    break;
+                                }
+                                else
+                                {
+                                    boundedSlots.Add(slot);
+                                    slotValues.Add(slot.SlotNameTrimmed, slotValue);
+                                }
+                            }
                         }
                     }
-                }
-            }
+                    if (result)
+                    {
+                        log("+ Ситуация " + situationPrototype.FrameName + " прошла проверку (исключая родителей).", recursionLevel);
 
-            if (result)
-            {
-                //TODO:                 
-                //тут еще как-то, думаю, будут использоваться задания отсутствия
-                //плюс, возможно, нужно будет добпвлять не только привязавшиеся слоты, но и вообще все.
-                foreach (Slot boundedSlot in boundedSlots)
-                {
-                    situationExample.AddSlot(boundedSlot);
-                    situationExample.SetValue(boundedSlot.SlotName, slotValues[boundedSlot.SlotNameTrimmed]); 
+                        passedSituationsIds.Add(situationPrototype.FrameId);
+                        foreach (Slot boundedSlot in boundedSlots)
+                        {
+                            if (!situationExample.ContainsSlot(boundedSlot.SlotName))
+                            {
+                                situationExample.AddSlot(boundedSlot);
+                                situationExample.SetValue(boundedSlot.SlotName, slotValues[boundedSlot.SlotNameTrimmed]);
+                            }
+                        }
+
+                        if (situationPrototype.GetParentFrame() != null)
+                        {
+                            log("Привязка родителей ситуации " + situationPrototype.FrameName + "...", recursionLevel);
+                            result = checkSituation(situationPrototype.GetParentFrame(), situationExample, recursionLevel+1);
+                        }
+                    }
+                    else
+                    {
+                        failedSituationsIds.Add(situationPrototype.FrameId);
+                        log("- Ситуация " + situationPrototype.FrameName + " не привязалась.", recursionLevel);
+                    }
+
+                    if (result)
+                    {
+                        log("Ситуация " + situationPrototype.FrameName + " Привязалась полностью.", recursionLevel);
+                        //TODO:                 
+                        //тут еще как-то, думаю, будут использоваться задания отсутствия
+                        //плюс, возможно, нужно будет добпвлять не только привязавшиеся слоты, но и вообще все.
+
+                    }                       
                 }
             }
             return result;
@@ -408,6 +470,7 @@ namespace SavannaFrame.Classes
 
         public object doMLVForPoint(GameCell gameCell)
         {
+            log();
             object result="Клетка пуста.";
             if (gameCell.FrameExample != null && gameCell.FrameExample.BaseFrame != null && gameCell.FrameExample.BaseFrame.FrameId != -1)
             {
@@ -430,11 +493,8 @@ namespace SavannaFrame.Classes
                     {
                         Slot actionSlot = situationToCheck.GetSlotByName("action");
                         situationExample.AddSlot(actionSlot);
-                        situationExample.SetValue(actionSlot.SlotName, actionSlot.SlotDefault);
-                        passedSituationsIds.Add(situationToCheck.FrameId);
+                        situationExample.SetValue(actionSlot.SlotName, actionSlot.SlotDefault);   
                     }
-                    else
-                        failedSituationsIds.Add(situationToCheck.FrameId);
                     situationToCheck = this.getNextFrameToCheck();
                 }
                 result = null;

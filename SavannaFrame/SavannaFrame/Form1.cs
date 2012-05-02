@@ -40,10 +40,16 @@ namespace SavannaFrame
         void gameField_GameCellClickedEvent(object sender, GameCellClickedEventArgs args)
         {
             MLV mlv = new MLV();
+            mlv.LogEvent += new LogEventHandler(mlv_LogEvent);
             object result = mlv.doMLVForPoint(args.GameCell);
             if (result == null)
                 result = "null";
-            rtbLOR.Text = result.ToString() + "\n" + rtbLOR.Text;
+            rtbLOR.Text = "Действие: "+result.ToString() + "\n" + rtbLOR.Text;
+        }
+
+        void mlv_LogEvent(object sender, LogEventArgs args)
+        {
+            this.rtbLOR.Text = args.Text + "\n" + this.rtbLOR.Text;
         }
 
         private void FraimDiagram_NodeCreated(object sender, MindFusion.Diagramming.NodeEventArgs e)
